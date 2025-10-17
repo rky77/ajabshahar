@@ -7,10 +7,10 @@ import FullBackground from '@/components/fullBackground';
 export default function FilmsPage() {
   return (
     <>
-      <FullBackground background={'/people-bg.svg'}>
+      <FullBackground background={'/film-page-bg.svg'}>
         <div className="min-h-screen">
           <Header />
-          <div className="news-inner-container">
+          <div className="people-inner-container">
             <main className="relative z-10">
               <div className="mx-auto z-11">
                 <Films />

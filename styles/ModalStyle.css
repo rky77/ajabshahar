@@ -39,7 +39,8 @@
 }
 .card-shape-top {
   margin: 20px 0 0;
-  padding: 0;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 .card-heading {
   color: #4d4d4d;

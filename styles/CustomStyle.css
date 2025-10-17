@@ -28,7 +28,7 @@
   width: 100%;
   background-size: cover;
   position: absolute;
-  top: -28px;
+  top: -39px;
   left: 0;
   height: 33px;
   z-index: 10;
@@ -43,6 +43,9 @@
   left: -5px;
   height: 36px;
   z-index: 10;
+}
+.poem-card-container .card-shape-top::before {
+  top: -29px;
 }
 
 .card-shape-top {
@@ -156,8 +159,10 @@
   margin: 0;
 }
 .poem-card-container {
-  transform: translate(49%);
-  margin: 186px 0;
+  /* transform: translate(49%);*/
+  margin: 186px 10% 186px 0;
+  display: flex;
+  justify-content: flex-end;
 }
 .reflection-card-container {
   transform: translate(24%);

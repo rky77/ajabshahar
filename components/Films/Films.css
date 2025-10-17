@@ -1,4 +1,5 @@
-.news-inner-container {
+.news-inner-container,
+.people-inner-container {
   background: url(/news-white-bg.png) left top;
   background-size: 100% auto;
   padding: 6.5rem 0 7rem;
@@ -10,22 +11,44 @@
   font-weight: 300;
   z-index: -100;
 }
+.people-inner-container {
+  background: none;
+  margin-bottom: 120px;
+}
+.films-heading-text {
+  color: #3c3c3b;
+  font-family: 'Lora', serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 30px 0 8px 0;
+  border-bottom: 1px solid #b1b1b1;
+}
 
 .button-font {
   font-size: 15px;
   font-weight: 300;
 }
 
-.songs-about {
-  color: #6d6e71;
-  background: white;
+.films-about {
+  color: #575756;
+  font-family: 'lora-italic';
+  background: transparent;
   font-size: 20px;
+  font-style: italic;
   font-weight: 400;
   line-height: normal;
-  margin: 4rem;
-  font-family: 'Lora', serif;
+  max-width: 1120px;
+  margin: 0 auto 50px;
 }
-
+.sub-heading-intro {
+  color: #4d4d4d;
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-size: 34px;
+  font-weight: 400;
+  margin: 60px 0 30px;
+}
 .black-custom-color {
   color: #4d4d4d;
 }
@@ -33,23 +56,54 @@
 .text-pink {
   color: #ed1e79;
 }
+.films-trailer {
+  font-size: 18px;
+}
+.films-trailer {
+  text-transform: uppercase;
+}
+.films-trailer span {
+  color: #6f6f72;
+}
 
-.search-result-page-heading {
-  color: #4f4f4f;
-  font-size: 26px;
+.people-banner-shadow {
+  box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  border-radius: 6px;
+}
+.films-separator {
+  border-color: #b1b1b1;
+}
+.card-separator {
+  border-bottom: 1px solid #9c9b9b;
+  max-width: 1032px;
+  margin: 60px auto;
+}
+.films-page-heading {
+  color: #575756;
+  font-size: 28px;
   font-weight: 400;
   line-height: normal;
   margin: 0 0 4px 0;
   font-family: 'Lora', serif;
 }
 
-.search-result-page-heading span {
-  color: #6d6e71;
-  font-size: 25px;
+.films-page-heading span {
+  color: #6f6f72;
+  font-size: 18px;
   font-family: 'lora-italic';
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0 0 0 0.5rem;
+}
+.films-directed-title {
+  color: #6f6f72;
+  font-size: 18px;
+}
+.films-date {
+  color: #6f6f72;
+  font-size: 17px;
+  margin: 3px 0 0;
 }
 .search-result-text {
   font-size: 18px;

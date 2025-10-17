@@ -1,12 +1,13 @@
+// components/Films/index.tsx
 'use client';
 
 import Loader from '@/components/Loader';
 import useFilms from '@/hooks/use-films';
 import { BASE_URL } from '@/lib/utils/constant';
 import Image from 'next/image';
-import { FILMS_INTO } from './constants';
-import './Films.css';
+import { FILMS_CONSTANTS } from './constants';
 import { Film } from './type';
+import './Films.css';
 
 const Films = () => {
   const { films = [], isLoading } = useFilms();
@@ -19,67 +20,104 @@ const Films = () => {
         <div className="mt-8">
           {/* Main Content */}
           <div className="max-w-6xl mx-auto px-4 pb-8">
-            {/* Search Header */}
-            <div className="text-center songs-about">{FILMS_INTO}</div>
-
-            {/* People Count */}
+            {/* Films Count */}
             <div className="text-left mb-2">
-              <h1 className="text-2xl md:text-3xl font-light black-custom-color mb-0 mt-0">
-                {films?.length || 0} films
-              </h1>
+              <h1 className="films-heading-text">{films?.length || 0} films</h1>
             </div>
-            <hr className="py-8" />
+
+            {/* Film Introduction */}
+            <div className="sub-heading-intro">{FILMS_CONSTANTS.FILMS_INTRO}</div>
+            <div className="text-center films-about">{FILMS_CONSTANTS.FILMS_DESCRIPTION}</div>
 
             {/* Results */}
-            <div className="space-y-8">
+            <div>
               {films.length
                 ? films.map((item: Film, index) => (
-                    <div key={item.id} className="bg-white">
+                    <div key={item.id} className="">
                       {/* Result Item */}
                       <div className="flex flex-col md:flex-row gap-6">
                         {/* Image */}
-                        <div className="flex-shrink-0">
-                          <div className="w-56 h-32 bg-gray-200 thumbnail-image overflow-hidden">
-                            {item?.thumbnailUrl && (
+                        <div className="flex-shrink-0 w-full md:w-[442px] h-[240px] people-banner-shadow">
+                          <div className="bg-gray-200 overflow-hidden h-[223px] relative">
+                            {item?.thumbnailUrl ? (
                               <Image
-                                src={`${BASE_URL}${item?.thumbnailUrl}`}
-                                alt={item?.metaTitle || item?.englishTransliteration}
-                                width={128}
-                                height={128}
-                                className="w-full h-full object-cover"
+                                src={`${BASE_URL}${item.thumbnailUrl}`}
+                                alt={
+                                  item?.metaTitle || item?.englishTransliteration || 'Film image'
+                                }
+                                fill
+                                sizes="(max-width: 768px) 100vw, 442px"
+                                className="object-cover"
                               />
+                            ) : (
+                              <div className="w-full h-full bg-gray-300 flex items-center justify-center relative">
+                                <span className="text-gray-500">No Image</span>
+                              </div>
                             )}
                           </div>
                         </div>
 
                         {/* Content */}
                         <div className="flex-1">
-                          {/* Optional Title/Subtitle block (commented out) */}
-                          <h2 className="search-result-page-heading mb-2">
-                            <span>{item?.englishTransliteration}</span>{' '}
-                            <span>{item?.englishTranslation}</span>
+                          <h2 className="films-page-heading">
+                            {item?.englishTransliteration}
+                            {item?.englishTranslation && (
+                              <>
+                                {' '}
+                                - <span className="text-gray-600">{item.englishTranslation}</span>
+                              </>
+                            )}
                           </h2>
-                          <p>
-                            by <span className="uppercase">{item?.directors?.[0].name}</span>
+
+                          {item?.directors?.[0]?.name && (
+                            <p className="films-directed-title">
+                              Directed by{' '}
+                              <span className="uppercase font-medium">
+                                {item.directors[0].name}
+                              </span>
+                            </p>
+                          )}
+
+                          <p className="films-date">
+                            {item?.duration && <span>{item.duration} mins</span>}
+                            {item?.yearOfProduction && ` , ${item.yearOfProduction}`}
+                            {item?.languages && item.languages.length > 0 && (
+                              <span>
+                                {' , Available in '}
+                                {item.languages.map((lang) => lang.name).join(', ')}
+                              </span>
+                            )}
+                            {(!item?.languages || item.languages.length === 0) && (
+                              <span> {',Available in English, Hindi, Kannada'}</span>
+                            )}
                           </p>
-                          <div>
-                            <span>{item?.duration}</span>mins, {item?.yearOfProduction}, available
-                            in <span></span>
-                          </div>
-                          <hr className="py-2" />
+
+                          <hr className="my-3 films-separator" />
+
                           {/* Description */}
-                          <p
-                            className="search-result-text mb-4 line-clamp-3 text-base"
-                            dangerouslySetInnerHTML={{
-                              __html: item?.profileText || '',
-                            }}
-                          />
-                          <div className="text-pink uppercase">trailer | film & more</div>
+                          {item?.profileText && (
+                            <div
+                              className="search-result-text mb-3 line-clamp-3 text-base text-gray-700"
+                              dangerouslySetInnerHTML={{
+                                __html: item.profileText,
+                              }}
+                            />
+                          )}
+
+                          <div className="text-pink films-trailer">
+                            trailer <span>|</span> film & more
+                          </div>
                         </div>
                       </div>
+                      {/* Hide separator for last item */}
+                      {index < films.length - 1 && <div className="card-separator"></div>}
                     </div>
                   ))
-                : 'No Results to show!'}
+                : !isLoading && (
+                    <div className="text-center py-12">
+                      <p className="text-gray-500 text-lg">No films found</p>
+                    </div>
+                  )}
             </div>
           </div>
         </div>
@@ -87,4 +125,5 @@ const Films = () => {
     </>
   );
 };
+
 export default Films;

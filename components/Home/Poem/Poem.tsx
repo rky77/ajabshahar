@@ -22,7 +22,7 @@ tu kya roondat moye? Ik din aisa aayega, main rondungi toyev The potter tells th
   const hasMedia = false;
 
   return (
-    <div>
+    <div className="full-width">
       <div className="bg-white poem-card-box-wrapper card-rounded-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
         {/* Card content */}
         <div

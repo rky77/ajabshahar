@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import '../../../styles/CustomStyle.css';
+// import '../../../styles/CustomStyle.css';
 
 const YOUTUBE_URL = 'https://www.youtube.com/embed';
 
