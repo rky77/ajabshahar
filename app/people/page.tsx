@@ -7,7 +7,7 @@ import FullBackground from '@/components/fullBackground';
 export default function PeoplePage() {
   return (
     <>
-      <FullBackground background={'/people-bg.svg'}>
+      <FullBackground background={'/people-bg.webp'}>
         <div className="min-h-screen">
           <Header />
           <div className="inner-container-people">

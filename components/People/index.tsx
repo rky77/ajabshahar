@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { PEOPLE_FILTER, PEOPLE_INTRO } from './constants';
 import './People.css';
 import { PersonProfile } from './type';
+import Link from 'next/link';
 
 const People = () => {
   const [activeFilter, setActiveFilter] = useState(PEOPLE_FILTER[0]);
@@ -97,10 +98,20 @@ const People = () => {
                               </span>
                             )}
                           </h2>
-                          <p
-                            className="card-text mb-4 line-clamp-3 text-base"
-                            dangerouslySetInnerHTML={{ __html: item?.profile || '' }}
-                          />
+                          <div className="flex items-start gap-2">
+                            <div className="items-start gap-2">
+                              <span
+                                className="people-card-text line-clamp-5 text-base flex-1"
+                                dangerouslySetInnerHTML={{ __html: item?.profile || '' }}
+                              />
+                              <Link
+                                href={`/people/${item.id}`}
+                                className="explore-text text-pink hover:underline whitespace-nowrap mt-1"
+                              >
+                                EXPLORE
+                              </Link>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -113,7 +124,7 @@ const People = () => {
               <div className="text-center people-btn-container">
                 <button
                   onClick={handleLoadMore}
-                  className="px-6 py-2 bg-pink cursor-pointer text-white rounded  hover:bg-pink-600 transition"
+                  className="px-6 py-2 load-more-cta cursor-pointer hover:bg-pink-600 transition"
                 >
                   Load More...
                 </button>

@@ -108,11 +108,26 @@ button.search-btn {
 .text-pink {
   color: #ed1e79;
 }
-.card-text,
-.card-text p {
+.load-more-cta {
+  color: #ed1e79;
+  color: #fff;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  border-radius: 6px;
+}
+.people-card-text,
+.people-card-text p {
   color: #6d6e71;
   font-size: 18px;
+  margin: 0;
 }
+a.text-pink {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
 button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.all-text.text-white {
   color: #e31e79;
   font-weight: 400;
