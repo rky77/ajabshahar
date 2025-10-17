@@ -1,0 +1,48 @@
+header nav a,
+.about-text {
+  color: #1a1a1a;
+  font-size: 25px;
+}
+.radio-logo img {
+  margin-top: -1rem;
+}
+.footer-heading-text {
+  color: #e31e79;
+  font-size: 28px;
+  font-family: 'Lora', serif;
+  font-weight: 400;
+}
+.header-inner-container {
+  padding: 36px 5% 0 4%;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+  header {
+    transition: none;
+    position: relative;
+    z-index: 1;
+  }
+  header::after {
+    content: ' ';
+    background: url(/header-curve.png) no-repeat;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    background-size: cover; /* or contain */
+    z-index: -1; /* keep it behind content if needed */
+    top: 0;
+  }
+
+  /* .headerArt {
+    background: url(/user/img/common/directives/header/header.png) 100% -1px no-repeat;
+    transition: none;
+    margin-top: -1px;
+    height: 90px;
+    position: relative;
+    z-index: 800;
+    width: 812px;
+    float: right;
+  } */
+}

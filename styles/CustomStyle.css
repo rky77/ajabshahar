@@ -1,0 +1,175 @@
+:root {
+  --main-pink-color: #e31e79;
+}
+.home-hero-container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto 0;
+  padding: 130px 0 100px;
+}
+.home-song-card {
+  max-width: 445px;
+}
+.video-custom-width {
+  padding: 4px 4px 0 4px;
+}
+.border-top-pink {
+  border-top: 1px solid var(--main-pink-color);
+  padding: 1rem 0 0;
+  box-sizing: border-box;
+}
+.pink {
+  color: var(--main-pink-color);
+}
+
+.card-shape-top::before {
+  content: ' ';
+  background: url(/card-shape-top.svg) no-repeat;
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  top: -28px;
+  left: 0;
+  height: 33px;
+  z-index: 10;
+}
+.card-shape-top::after {
+  content: ' ';
+  background: url(/card-shape-bottom-v2.png) no-repeat;
+  width: 105%;
+  background-size: cover;
+  position: absolute;
+  bottom: -25px;
+  left: -5px;
+  height: 36px;
+  z-index: 10;
+}
+
+.card-shape-top {
+  position: relative;
+}
+.vide-custom-width {
+  width: 98%;
+  margin: 4px auto 0;
+  padding: 4px 0 0;
+}
+.vide-custom-width img {
+  padding: 4px 0 0;
+}
+.card-heading {
+  color: var(--main-pink-color);
+  line-height: normal;
+  margin: 0;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 400;
+}
+.semi-heading {
+  font-size: 24px;
+  line-height: normal;
+  color: #6d6e71;
+  margin: 0;
+  font-family: 'lora-italic';
+}
+.semi-heading-2 {
+  color: #6d6e71;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+}
+.card-text {
+  font-size: 18px;
+  line-height: 25px;
+  color: #6d6e71;
+  margin: 15px 0 34px;
+}
+.card-rounded-4 {
+  border-radius: 5px 5px 0 0;
+}
+.pink {
+  font-size: 16px;
+}
+.search-result-heading {
+  color: var(--main-pink-color);
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: normal;
+  font-family: 'Merriweather Sans', sans-serif;
+  margin: 0;
+}
+.search-result-semi-heading {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.5rem;
+  line-height: normal;
+  color: #4f4f4f;
+}
+.border-gray-custom {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0.9rem 3rem;
+  box-sizing: border-box;
+  width: 96%;
+  margin: -3px auto 0;
+}
+.serch-input-font {
+  color: #6d6e71;
+  font-size: 28px;
+}
+.serch-result-conatiner {
+  box-shadow: 0px 6px 14px -4px rgba(0, 0, 0, 0.25);
+  margin: 0;
+  border-radius: 0 0 2.5rem 2.5rem;
+}
+.rounded-custom {
+  border-radius: 2.5rem;
+}
+.rounded-custom-onsearch {
+  border-radius: 2.5rem 2.5rem 0 0;
+}
+
+.full-background {
+  background: url(/background-ajab-news.png) 0 0 repeat;
+  background-size: 100%;
+}
+
+.full-background-home-page {
+  background: url(/combined-Background-image-home-v2.svg) 0 -44px no-repeat;
+  background-size: 100%;
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 0 0 200px 0;
+}
+
+/* Apply padding only for cards with no video/image */
+
+.home-song-card,
+.film-card-container,
+.people-card-container,
+.reflection-card-container {
+  max-width: 445px;
+  width: 100%;
+}
+.home-song-card {
+  transform: translate(46%);
+}
+.reflection-card-container .semi-heading-2 {
+  margin: 0;
+}
+.poem-card-container {
+  transform: translate(49%);
+  margin: 186px 0;
+}
+.reflection-card-container {
+  transform: translate(24%);
+}
+.people-card-container {
+  transform: translate(136%);
+  margin: 186px 0;
+  width: 100%;
+}
+.film-card-container {
+  transform: translate(48%);
+}
+
+@media screen and (max-width: 768px) {
+}

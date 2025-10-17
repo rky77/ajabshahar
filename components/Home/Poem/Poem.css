@@ -1,0 +1,38 @@
+/* Poem Css start */
+.poem-card-box-wrapper {
+  max-width: 470px;
+  box-sizing: border-box;
+}
+.poem-card-box-wrapper .border-top-pink {
+  max-width: 300px;
+  width: 100%;
+}
+.poem-card-box-wrapper .card-text {
+  color: #6d6e71;
+  font-size: 24px;
+  line-height: 33px;
+  max-width: 300px;
+  font-family: 'Lora', italic;
+  margin: 35px 0 26px;
+}
+.poem-card-box-wrapper .justify-self-stretch {
+  width: 100%;
+  justify-content: end;
+  display: flex;
+  margin: 36px 0 0;
+}
+.no-media-padding .justify-center.flex {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.peopm-heading {
+  color: #333;
+  font-size: 24px;
+  max-width: 320px;
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'lora-italic';
+}
+
+/* Poem Css end */

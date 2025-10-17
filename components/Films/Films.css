@@ -1,0 +1,65 @@
+.news-inner-container {
+  background: url(/news-white-bg.png) left top;
+  background-size: 100% auto;
+  padding: 6.5rem 0 7rem;
+  max-width: 1420px;
+  width: 100%;
+  text-align: left;
+  margin: -30px auto 0;
+  min-height: 1300px;
+  font-weight: 300;
+  z-index: -100;
+}
+
+.button-font {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.songs-about {
+  color: #6d6e71;
+  background: white;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 4rem;
+  font-family: 'Lora', serif;
+}
+
+.black-custom-color {
+  color: #4d4d4d;
+}
+
+.text-pink {
+  color: #ed1e79;
+}
+
+.search-result-page-heading {
+  color: #4f4f4f;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 0 4px 0;
+  font-family: 'Lora', serif;
+}
+
+.search-result-page-heading span {
+  color: #6d6e71;
+  font-size: 25px;
+  font-family: 'lora-italic';
+  font-style: italic;
+  font-weight: 300;
+  margin: 0 0 0 0.5rem;
+}
+.search-result-text {
+  font-size: 18px;
+  line-height: 25px;
+  line-height: normal;
+  color: #6d6e71;
+}
+
+.thumbnail-image {
+  filter: drop-shadow(7px 7px 10px rgba(0, 0, 0, 0.1));
+  padding: 0 5px 5px;
+  background: #fff;
+}

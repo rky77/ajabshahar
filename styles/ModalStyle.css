@@ -1,0 +1,50 @@
+.modal-container .bg-white,
+.modal-container .bg-white:hover {
+  box-shadow: none;
+}
+
+.modal-container .card-shape-top::before,
+.modal-container .card-shape-top::after {
+  display: none;
+}
+
+/* Ensure the modal container has proper spacing */
+.modal-container {
+  padding: 1rem 0;
+}
+
+/* Style adjustments for content cards in modal */
+.modal-container .content-card {
+  border: none;
+  background: transparent;
+}
+.news-logo img {
+  max-width: 110px;
+  position: absolute;
+  left: -60px;
+  z-index: 10;
+  top: -29px;
+}
+.news-text img {
+  max-width: 130px;
+  position: absolute;
+  left: 35px;
+  z-index: 10;
+  top: 22px;
+}
+
+.card-text {
+  margin: 15px 0 8px;
+  box-shadow: none;
+}
+.card-shape-top {
+  margin: 20px 0 0;
+  padding: 0;
+}
+.card-heading {
+  color: #4d4d4d;
+  font-family: Lora;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+}
