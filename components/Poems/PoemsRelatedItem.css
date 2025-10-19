@@ -87,6 +87,9 @@ button.search-btn:first-child::before {
   font-weight: 300;
   line-height: normal;
 }
+.button-font span.num {
+  font-size: 16px;
+}
 .news-banner-shadow {
   filter: drop-shadow(7px 7px 10px rgba(0, 0, 0, 0.1));
   padding: 4px;

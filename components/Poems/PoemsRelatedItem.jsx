@@ -91,7 +91,7 @@ export default function PoemsRelatedItem() {
                     : 'text-gray-600 hover:text-pink-500'
                 }`}
               >
-                {filter} ({searchData.counts[filter]})
+                {filter} <span className="num">({searchData.counts[filter]})</span>
               </button>
 
               {/* Vertical Separator (except for last item) */}
