@@ -39,6 +39,7 @@ const People = () => {
 
             {/* Filter Tabs */}
             <div className="flex flex-wrap justify-start gap-1  border-t-costom pt-3 pb-4">
+              <span className="text-pink  filters">Filters </span>
               {PEOPLE_FILTER.map((filter) => (
                 <button
                   key={filter}

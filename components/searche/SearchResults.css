@@ -37,17 +37,17 @@ button.search-btn {
   font-weight: 300;
   line-height: normal;
 }
-button.search-btn::before {
+/* button.search-btn::before {
   content: ' ';
   border-right: 1px solid #999;
   color: ;
   margin: 0 10px;
-}
-button.search-btn:first-child::before {
+} */
+/* button.search-btn:first-child::before {
   content: ' ';
   border-right: 1px solid #fff;
   margin: 0 10px;
-}
+} */
 .black-custom-color {
   color: #4d4d4d;
 }
@@ -103,4 +103,7 @@ button.search-btn:first-child::before {
   font-weight: 200;
   margin: 0 12px;
   color: #999;
+}
+button.search-btn::before {
+  display: none;
 }

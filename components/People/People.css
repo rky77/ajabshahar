@@ -39,6 +39,15 @@ span.filter {
   line-height: normal;
   letter-spacing: 0.84px;
 }
+.filters {
+  color: #e31e79;
+  font-family: 'Merriweather Sans';
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.869px;
+}
 .border-t-costom {
   border-top: 1px solid #b1b1b1;
   display: flex;
