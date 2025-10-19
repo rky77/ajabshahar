@@ -133,6 +133,8 @@
 .full-background {
   background: url(/background-ajab-news.png) 0 0 repeat;
   background-size: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .full-background-home-page {

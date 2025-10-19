@@ -29,7 +29,6 @@ export default function SearchResults() {
             {/* Filter Tabs */}
             <div className="flex flex-wrap justify-start gap-1  border-t-costom pt-3 pb-4">
               <span className="text-pink  filters">Filters </span>
-              <span className="seprator-all">|</span>
               {SONGS_FILTER.map((filter) => (
                 <button
                   key={filter}

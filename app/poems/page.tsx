@@ -7,10 +7,10 @@ import FullBackground from '@/components/fullBackground';
 export default function PoemsPage() {
   return (
     <>
-      <FullBackground>
+      <FullBackground background={'/poems-page-bg.webp'}>
         <div className="min-h-screen">
           <Header />
-          <div className="inner-container-common">
+          <div className="inner-container-poems">
             <main className="relative z-10">
               <div className="mx-auto z-11">
                 <Poems />

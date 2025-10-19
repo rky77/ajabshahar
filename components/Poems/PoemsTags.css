@@ -1,0 +1,36 @@
+.poems-tag-inner-container {
+  background: url(/poems-rectangle.svg) no-repeat;
+  max-width: 1032px;
+  background-size: cover;
+  max-width: 1032px;
+  width: 100%;
+  margin: 80px auto 0;
+  padding: 40px 0;
+}
+.tag-inner-container {
+  display: flex;
+  gap: 10px;
+  max-width: 500px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+}
+.tag-text {
+  color: #3c3c3b;
+  font-size: 21px;
+}
+.tag-text .tag {
+  font-family: 'Merriweather Sans';
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.869px;
+}
+.tag-italic {
+  color: #828282;
+  font-family: 'lora-italic';
+  font-style: italic;
+  font-size: 20px;
+}

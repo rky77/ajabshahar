@@ -64,6 +64,17 @@ button.search-btn:first-child::before {
   line-height: normal;
   letter-spacing: 0.869px;
 }
+.filters::after {
+  content: '|';
+  font-size: 24px;
+  color: #828282;
+  font-weight: 300;
+  margin-left: 12px;
+}
+button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.text-pink.text-white {
+  color: #e31e79;
+  font-weight: 400;
+}
 .all-text {
   color: #828282;
   font-family: 'Merriweather Sans';
