@@ -141,7 +141,7 @@ export default function PoemsRelatedItem() {
         </div>
       </div>
       <div className="poems-related-inner-container px-4 pb-0">
-        <button className="see-all-btn">See All</button>
+        <button className="see-all-btn">SEE MORE</button>
       </div>
     </div>
   );
