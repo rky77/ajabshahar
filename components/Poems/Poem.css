@@ -70,3 +70,6 @@ button.search-btn {
   line-height: normal;
   letter-spacing: 0.869px;
 }
+.button.search-btn:before {
+  display: none;
+}

@@ -163,7 +163,9 @@ button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.
 .seprator-all {
   font-size: 20px;
 }
-
+.button.search-btn:before {
+  display: none;
+}
 @media screen and (max-width: 767px) {
   .song-card-container {
     display: flex;
