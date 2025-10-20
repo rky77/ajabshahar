@@ -34,7 +34,7 @@ span.see-all {
   color: #ed1e79;
 }
 
-button.search-btn {
+button.fillter-btn {
   color: #282828;
 }
 
@@ -70,6 +70,6 @@ button.search-btn {
   line-height: normal;
   letter-spacing: 0.869px;
 }
-.button.search-btn:before {
+.button.fillter-btn:before {
   display: none;
 }

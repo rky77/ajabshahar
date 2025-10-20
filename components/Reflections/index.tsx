@@ -39,7 +39,9 @@ const Reflections = () => {
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
                   className={` border-0 button-font cursor-pointer uppercase transition-colors ${
-                    activeFilter === filter ? 'text-pink text-white' : 'bg-white  border search-btn'
+                    activeFilter === filter
+                      ? 'text-pink text-white'
+                      : 'bg-white  border fillter-btn'
                   }`}
                 >
                   {filter}

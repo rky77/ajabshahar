@@ -36,7 +36,7 @@ export default function SearchResults() {
                   className={` border-0 button-font all-text cursor-pointer uppercase transition-colors ${
                     activeFilter === filter
                       ? 'text-pink text-white'
-                      : 'bg-white   border search-btn'
+                      : 'bg-white   border fillter-btn'
                   }`}
                 >
                   {filter}

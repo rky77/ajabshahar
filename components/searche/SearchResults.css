@@ -30,7 +30,7 @@
 .text-pink {
   color: #ed1e79;
 }
-button.search-btn {
+button.fillter-btn {
   color: #282828;
   font-family: 'Merriweather Sans';
   font-size: 22px;
@@ -103,7 +103,4 @@ button.search-btn {
   font-weight: 200;
   margin: 0 12px;
   color: #999;
-}
-button.search-btn::before {
-  display: none;
 }
