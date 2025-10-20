@@ -53,7 +53,7 @@ span.filter {
   display: flex;
   justify-content: space-between;
 }
-button.search-btn {
+button.fillter-btn {
   color: #828282;
   font-family: 'Merriweather Sans';
   background: transparent;

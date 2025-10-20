@@ -74,6 +74,7 @@ button.fillter-btn {
 button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.text-pink.text-white {
   color: #e31e79;
   font-weight: 400;
+  font-size: 21px;
 }
 .all-text {
   color: #828282;
@@ -165,6 +166,9 @@ button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.
 }
 .button.fillter-btn:before {
   display: none;
+}
+.card-shape-top::before {
+  top: -26px;
 }
 @media screen and (max-width: 767px) {
   .song-card-container {
