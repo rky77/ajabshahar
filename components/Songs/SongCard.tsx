@@ -27,7 +27,7 @@ export default function SongCard(item: Song) {
           alt={item.metaTitle || 'Song thumbnail'}
           width={400}
           height={186}
-          className="object-cover rounded-t-lg w-full h-full"
+          className="object-cover  w-full h-full"
           priority
         />
       </div>

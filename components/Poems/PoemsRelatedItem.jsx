@@ -86,9 +86,7 @@ export default function PoemsRelatedItem() {
               <button
                 onClick={() => setActiveFilter(filter)}
                 className={`border-0 button-font cursor-pointer transition-colors ${
-                  activeFilter === filter
-                    ? 'text-pink-600 font-semibold'
-                    : 'text-gray-600 hover:text-pink-500'
+                  activeFilter === filter ? 'button-active-text font-semibold' : 'text-gray-60'
                 }`}
               >
                 {filter} <span className="num">({searchData.counts[filter]})</span>

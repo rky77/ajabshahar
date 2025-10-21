@@ -1,6 +1,13 @@
-.button-font {
-  font-size: 15px;
+.poems-related-inner-container .button-font {
+  font-family: 'Merriweather Sans';
+  font-size: 22px;
   font-weight: 300;
+  line-height: normal;
+  color: #282828;
+}
+
+button.border-0.button-font.cursor-pointer.transition-colors.button-active-text.font-semibold {
+  color: #ed1e79;
 }
 .poems-about {
   color: #575756;
@@ -10,9 +17,10 @@
   font-style: italic;
   font-weight: 400;
   line-height: normal;
-  max-width: 1120px;
+  max-width: 1010px;
   margin: 0 auto 50px;
 }
+
 span.see-all {
   color: #e31e79;
   font-family: 'Merriweather Sans';
@@ -50,7 +58,7 @@ button.fillter-btn {
 } */
 
 .inner-container-poems {
-  padding: 80px 0 200px;
+  padding: 100px 0 200px;
 }
 .poems-heading-text {
   color: #3c3c3b;

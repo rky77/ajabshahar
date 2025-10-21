@@ -34,8 +34,9 @@ span.filter {
 .all-text {
   color: #828282;
   font-family: 'Merriweather Sans';
+  background: transparent;
   font-size: 21px;
-  font-weight: 600;
+  font-weight: 300;
   line-height: normal;
   letter-spacing: 0.84px;
 }
@@ -48,10 +49,25 @@ span.filter {
   line-height: normal;
   letter-spacing: 0.869px;
 }
+.filters::after {
+  content: ' |';
+  color: #828282;
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: 5px;
+}
 .border-t-costom {
   border-top: 1px solid #b1b1b1;
   display: flex;
+  justify-content: space-around;
+}
+button.border-0.tab-button-font.all-text.cursor-pointer.uppercase.transition-colors.all-text.text-white {
+  color: #ed1e79;
+}
+.button-link-container {
+  width: 90%;
   justify-content: space-between;
+  display: flex;
 }
 button.fillter-btn {
   color: #828282;
@@ -61,6 +77,9 @@ button.fillter-btn {
   font-weight: 300;
   line-height: normal;
   letter-spacing: 0.84px;
+}
+.inner-container-poems .button-active-text {
+  color: #e31e79;
 }
 
 .people-count-text {
@@ -78,7 +97,7 @@ button.fillter-btn {
   font-style: italic;
   font-weight: 400;
   line-height: normal;
-  max-width: 1120px;
+  max-width: 1010px;
   margin: 0 auto 50px;
 }
 .people-card-inner-container {

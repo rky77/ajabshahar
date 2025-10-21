@@ -110,7 +110,7 @@ const Films = () => {
                         </div>
                       </div>
                       {/* Hide separator for last item */}
-                      {index < films.length - 1 && <div className="card-separator"></div>}
+                      <div className="card-separator"></div>
                     </div>
                   ))
                 : !isLoading && (

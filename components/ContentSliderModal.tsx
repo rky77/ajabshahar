@@ -11,7 +11,7 @@ import ajabNewsLogo from '../public/ajab-news-fly.png';
 import ajabNewsText from '../public/ajab-news-text.png';
 import PrevIcon from '../public/left-arrow.svg';
 import NextIcon from '../public/right-arrow.svg';
-import popUpBg from '../public/pop-up-bg-v2.png';
+import popUpBg from '../public/pop-up-bg.webp';
 
 import type { ContentItem } from '@/lib/data';
 import ContentCard from './ContentCard';
@@ -39,13 +39,15 @@ export default function ContentSliderModal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 flex items-start justify-center  pop-up-custom-outter-spacing">
+      {' '}
+      {/* Changed items-center to items-start and added pt-20 (80px) */}
       {/* Background container with 90% height and centered */}
       <div
-        className="absolute w-full h-[96%] max-w-[820px] mx-auto"
+        className="absolute w-full h-[830px] max-w-[820px] mx-auto pop-up-margin-top"
         style={{
           backgroundImage: `url(${popUpBg.src})`,
-          backgroundSize: 'cover',
+          backgroundSize: 'content',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           top: '50%',
@@ -54,9 +56,10 @@ export default function ContentSliderModal({
           zIndex: -1,
         }}
       />
-
       {/* Modal content */}
-      <div className="relative rounded-2xl pt-2 pb-2 max-w-[620px] w-full flex flex-col items-center  bg-transparent">
+      <div className="relative flex flex-col items-center justify-center max-w-[620px] w-full bg-transparent rounded-2xl py-4 mx-auto h-full">
+        {' '}
+        {/* Added mt-0 to ensure no additional margin */}
         {/* Header */}
         <div className="flex items-center justify-between w-full px-2 py-2 bg-white rounded-t-2xl">
           <div className="news-logo">
@@ -67,13 +70,12 @@ export default function ContentSliderModal({
           </div>
           <button
             onClick={onClose}
-            className="text-pink-600 hover:text-pink-700  mr-1 text-xl font-bold cursor-pointer"
+            className="text-pink-600 hover:text-pink-700 mr-1 text-xl font-bold cursor-pointer"
             aria-label="Close"
           >
             ✕
           </button>
         </div>
-
         {/* Swiper wrapper */}
         <div className="relative w-full flex justify-center bg-white">
           {/* Prev Button */}

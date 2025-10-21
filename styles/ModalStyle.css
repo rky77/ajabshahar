@@ -49,3 +49,23 @@
   font-weight: 400;
   line-height: normal;
 }
+.semi-heading,
+.semi-heading-2 {
+  display: none;
+}
+.pop-up-margin-top {
+  margin: 150px 0 0;
+}
+.pop-up-custom-outter-spacing {
+  padding: 120px 0 0;
+}
+
+.border-top-pink {
+  border-top: none;
+  padding: 0rem 0 0;
+  box-sizing: border-box;
+}
+.pop-up-custom-outter-spacing .card-shape-top .justify-end {
+  display: flex;
+  justify-content: flex-start;
+}

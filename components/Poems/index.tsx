@@ -21,7 +21,7 @@ export default function Poems() {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className="mt-8">
+        <div>
           {/* Main Content */}
           <div className="max-w-6xl mx-auto px-4 pb-8">
             {/* Search Header */}

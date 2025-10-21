@@ -40,20 +40,24 @@ const People = () => {
             {/* Filter Tabs */}
             <div className="flex flex-wrap justify-start gap-1  border-t-costom pt-3 pb-4">
               <span className="text-pink  filters">Filters </span>
-              {PEOPLE_FILTER.map((filter) => (
-                <button
-                  key={filter}
-                  onClick={() => {
-                    setActiveFilter(filter);
-                    setVisibleCount(4); // Reset visible count on filter change
-                  }}
-                  className={`border-0 button-font all-text cursor-pointer uppercase transition-colors ${
-                    activeFilter === filter ? ' all-text text-white' : 'bg-white border search-btn'
-                  }`}
-                >
-                  {filter}
-                </button>
-              ))}
+              <div className="button-link-container">
+                {PEOPLE_FILTER.map((filter) => (
+                  <button
+                    key={filter}
+                    onClick={() => {
+                      setActiveFilter(filter);
+                      setVisibleCount(4); // Reset visible count on filter change
+                    }}
+                    className={`border-0 tab-button-font all-text cursor-pointer uppercase transition-colors ${
+                      activeFilter === filter
+                        ? ' all-text text-white'
+                        : 'bg-white border search-btn'
+                    }`}
+                  >
+                    {filter}
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* Results */}

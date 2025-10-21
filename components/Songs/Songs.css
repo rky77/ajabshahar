@@ -1,7 +1,7 @@
 .inner-container-common {
   background: url(/song-container-bg-v2.svg) left top;
   background-size: 100% auto;
-  padding: 6.5rem 0 7rem;
+  padding: 100px 0 140px;
   max-width: 1420px;
   width: 100%;
   text-align: left;
@@ -23,7 +23,7 @@
   font-style: italic;
   font-weight: 400;
   line-height: normal;
-  max-width: 1120px;
+  max-width: 1010px;
   margin: 0 auto 50px;
 }
 
@@ -69,7 +69,7 @@ button.fillter-btn {
   font-size: 24px;
   color: #828282;
   font-weight: 300;
-  margin-left: 12px;
+  margin-left: 5px;
 }
 button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.text-pink.text-white {
   color: #e31e79;
@@ -80,7 +80,6 @@ button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.
   color: #828282;
   font-family: 'Merriweather Sans';
   font-size: 21px;
-  font-weight: 600;
   line-height: normal;
   letter-spacing: 0.84px;
 }
@@ -95,6 +94,7 @@ button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.
 .song-card-landing-p {
   max-width: 288px;
   width: 100%;
+  padding: 0;
   box-shadow: 8px 0 12px -4px rgba(0, 0, 0, 0.1);
   position: relative;
   border-radius: 4px 4px 0 0;
@@ -106,6 +106,11 @@ button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.
   line-height: normal;
   font-style: normal;
   font-weight: 400;
+}
+.button-link-container {
+  width: 90%;
+  justify-content: space-between;
+  display: flex;
 }
 .song-semi-heading {
   color: #828282;
@@ -140,15 +145,16 @@ button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.
 .song-card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 80px;
+  gap: 70px;
   justify-content: space-between;
   row-gap: 52px;
-  margin: 74px 0 160px;
+  max-width: 1010px;
+  margin: 74px auto 160px;
 }
 .border-t-costom {
   border-top: 1px solid #b1b1b1;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .news-inner-container {
   background: url(/song-container-bg-v2.svg) left top;
@@ -167,9 +173,18 @@ button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.
 .button.fillter-btn:before {
   display: none;
 }
-.card-shape-top::before {
-  top: -26px;
+.song-card-container .card-shape-top::before {
+  content: ' ';
+  background: url(/song-card-bottom.png) no-repeat;
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  height: 22px;
+  z-index: 10;
 }
+
 @media screen and (max-width: 767px) {
   .song-card-container {
     display: flex;

@@ -29,19 +29,21 @@ export default function SearchResults() {
             {/* Filter Tabs */}
             <div className="flex flex-wrap justify-start gap-1  border-t-costom pt-3 pb-4">
               <span className="text-pink  filters">Filters </span>
-              {SONGS_FILTER.map((filter) => (
-                <button
-                  key={filter}
-                  onClick={() => setActiveFilter(filter)}
-                  className={` border-0 button-font all-text cursor-pointer uppercase transition-colors ${
-                    activeFilter === filter
-                      ? 'text-pink text-white'
-                      : 'bg-white   border fillter-btn'
-                  }`}
-                >
-                  {filter}
-                </button>
-              ))}
+              <div className="button-link-container">
+                {SONGS_FILTER.map((filter) => (
+                  <button
+                    key={filter}
+                    onClick={() => setActiveFilter(filter)}
+                    className={` border-0 button-font all-text cursor-pointer uppercase transition-colors ${
+                      activeFilter === filter
+                        ? 'text-pink text-white'
+                        : 'bg-white   border fillter-btn'
+                    }`}
+                  >
+                    {filter}
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* Results */}
