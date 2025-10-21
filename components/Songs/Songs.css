@@ -23,7 +23,7 @@
   font-style: italic;
   font-weight: 400;
   line-height: normal;
-  max-width: 1010px;
+  max-width: 1055px;
   margin: 0 auto 50px;
 }
 
@@ -108,7 +108,7 @@ button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.
   font-weight: 400;
 }
 .button-link-container {
-  width: 90%;
+  width: 91%;
   justify-content: space-between;
   display: flex;
 }
@@ -148,7 +148,7 @@ button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.
   gap: 70px;
   justify-content: space-between;
   row-gap: 52px;
-  max-width: 1010px;
+  max-width: 1055px;
   margin: 74px auto 160px;
 }
 .border-t-costom {

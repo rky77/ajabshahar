@@ -19,7 +19,7 @@ export default function SearchResults() {
       ) : (
         <div className="mt-8">
           {/* Main Content */}
-          <div className="max-w-6xl mx-auto px-4 pb-8">
+          <div className="max-w-[1240px] mx-auto px-4 pb-8">
             {/* Search Header */}
             <div className="text-center songs-about-intro">{SONGS_INTRO}</div>
             <div className="text-left mb-2">

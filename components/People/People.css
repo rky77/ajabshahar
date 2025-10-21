@@ -65,7 +65,7 @@ button.border-0.tab-button-font.all-text.cursor-pointer.uppercase.transition-col
   color: #ed1e79;
 }
 .button-link-container {
-  width: 90%;
+  width: 91%;
   justify-content: space-between;
   display: flex;
 }
@@ -97,11 +97,12 @@ button.fillter-btn {
   font-style: italic;
   font-weight: 400;
   line-height: normal;
-  max-width: 1010px;
+  max-width: 1055px;
   margin: 0 auto 50px;
 }
 .people-card-inner-container {
   margin: 60px auto 0;
+  max-width: 1100px;
 }
 .people-card-wrp {
   margin: 0 0 75px;

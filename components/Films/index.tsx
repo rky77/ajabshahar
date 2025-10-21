@@ -19,7 +19,7 @@ const Films = () => {
       ) : (
         <div className="mt-8">
           {/* Main Content */}
-          <div className="max-w-6xl mx-auto px-4 pb-8">
+          <div className="max-w-[1240px] mx-auto px-4 pb-8">
             {/* Films Count */}
             <div className="text-left mb-2">
               <h1 className="films-heading-text">{films?.length || 0} films</h1>

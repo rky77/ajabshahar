@@ -26,11 +26,11 @@
   top: -29px;
 }
 .news-text img {
-  max-width: 130px;
+  max-width: 150px;
   position: absolute;
   left: 35px;
   z-index: 10;
-  top: 22px;
+  top: 50%;
 }
 
 .card-text {
@@ -65,7 +65,11 @@
   padding: 0rem 0 0;
   box-sizing: border-box;
 }
-.pop-up-custom-outter-spacing .card-shape-top .justify-end {
+.news-pop-up-modal .card-shape-top .justify-end {
   display: flex;
   justify-content: flex-start;
+}
+.modal-content-inner {
+  top: 50%;
+  transform: translateY(-50%);
 }
