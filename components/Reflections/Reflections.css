@@ -1,5 +1,5 @@
-.inner-container-common {
-  background: url(/song-container-bg-v2.svg) left top;
+.inner-container-reflections {
+  background: url(/reflections_background.webp) no-repeat left top;
   background-size: 100% auto;
   padding: 100px 0 140px;
   max-width: 1420px;
@@ -15,35 +15,124 @@
   font-size: 15px;
   font-weight: 300;
 }
-.songs-about {
-  color: #6d6e71;
-  font-size: 20px;
+.reflections-about {
+  color: #575756;
+  font-family: 'lora-italic';
   background: transparent;
+  font-size: 20px;
+  font-style: italic;
   font-weight: 400;
   line-height: normal;
-  margin: 4rem;
-  font-family: 'Lora', serif;
+  max-width: 760px;
+  margin: 0 auto 50px;
 }
 
 .black-custom-color {
   color: #4d4d4d;
 }
+.reflections-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+  justify-content: space-between;
+  row-gap: 52px;
+  max-width: 1020px;
+  margin: 74px auto 160px;
+}
 
 .text-pink {
   color: #ed1e79;
+}
+.fillter {
+  font-size: 21px;
+  font-weight: 600;
+}
+.fillter::after {
+  content: ' |';
+  color: #4f4f4f;
+  font-size: 20px;
+  margin-left: 5px;
+}
+.all {
+  color: #4f4f4f;
+  font-size: 21px;
 }
 
 button.fillter-btn {
   color: #282828;
 }
 
-/* button.search-btn::before {
-  color: #282828;
-  margin: 0 10px;
-} */
+.reflections-card {
+  max-width: 288px;
+}
 
-/* button.search-btn:first-child::before {
+.reflections-card-landing-p {
+  max-width: 288px;
+  width: 100%;
+  padding: 0;
+  box-shadow: 8px 0 12px -4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-radius: 4px 4px 0 0;
+}
+
+.reflections-semi-heading {
+  color: #6f7071;
+  font-family: 'Merriweather Sans';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 6px 0 16px;
+}
+.reflections-semi-heading .name {
+  text-transform: uppercase;
+}
+.reflections-card-heading {
+  color: #e31e79;
+  font-family: 'Lora', serif;
+  font-size: 24px;
+  line-height: normal;
+  font-style: normal;
+  font-weight: 400;
+}
+.reflections-card-text {
+  color: #6f7071;
+  font-family: 'Merriweather Sans';
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 300;
+  padding: 8px 0 0;
+  border-top: 1px solid #e0e0e0;
+}
+.card-rounded-4 {
+  border-radius: 5px 5px 0 0;
+  height: fit-content;
+}
+
+.inner-container-reflections .card-shape-top::after {
+  max-width: 291px;
+  min-width: 291px;
+  margin: 0 auto;
+  left: -3px;
+  width: 100%;
+}
+.inner-container-reflections .card-shape-top::before {
   content: ' ';
-  border-right: 1px solid #fff;
-  margin: 0 10px;
-} */
+  background: url(/song-card-bottom.png) no-repeat;
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  height: 22px;
+  z-index: 10;
+  top: -16px;
+}
+.reflections-card-link {
+  color: #b1b1b1;
+  font-family: 'Merriweather Sans';
+  font-size: 14px;
+  line-height: normal;
+  margin: 22px 0 0;
+}
+.border-top-heading {
+  border-top: 1px solid #b1b1b1;
+}
