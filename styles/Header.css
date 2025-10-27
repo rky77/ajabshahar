@@ -16,6 +16,9 @@ header nav a,
   padding: 36px 5% 0 4%;
   box-sizing: border-box;
 }
+.nav-link.active {
+  color: #e31e79;
+}
 @media screen and (min-width: 768px) {
   header {
     transition: none;

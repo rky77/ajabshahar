@@ -3,11 +3,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Search, Menu, X } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 import { navigationItems } from '@/lib/data';
+import Image from 'next/image';
 import logo from '../public/logo.svg';
 import radio from '../public/radio.svg';
 import '../styles/Header.css';
-import Image from 'next/image';
 
 interface HeaderProps {
   onSearchToggle: () => void;
@@ -16,27 +17,30 @@ interface HeaderProps {
 
 export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname(); // ✅ Get current path
 
   return (
     <div className="gradient-bg">
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm  border-gray-200 ">
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-gray-200">
         <div className="mx-auto header-inner-container">
-          <div className="flex  justify-between">
+          <div className="flex justify-between">
+            {/* Logo Section */}
             <div className="flex gap-10">
               <Link href="/" className="flex items-center space-x-3">
-                <div className="w-30   flex items-center justify-center relative">
+                <div className="w-30 flex items-center justify-center relative">
                   <div className="absolute inset-2 flex items-center justify-center">
                     <Image src={logo} alt="Ajab Shahar" width={150} height={150} />
                   </div>
                 </div>
               </Link>
 
+              {/* Desktop Navigation */}
               <nav className="hidden md:flex items-left space-x-12">
                 {navigationItems.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-sm  hover:text-gray-600 transition-colors tracking-wide uppercase"
+                    className={`nav-link ${pathname === item.href ? 'active' : ''}`}
                   >
                     {item.name}
                   </Link>
@@ -44,10 +48,13 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
               </nav>
             </div>
 
+            {/* Right Side Icons */}
             <div className="flex items-center space-x-6 footer-right">
               <Link
                 href="/about"
-                className="about-text   hover:text-gray-600 transition-colors tracking-wide uppercase"
+                className={`about-text tracking-wide uppercase transition-colors ${
+                  pathname === '/about' ? 'active' : ''
+                }`}
               >
                 ABOUT
               </Link>
@@ -62,11 +69,11 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
                 <Search className="w-8 h-8" />
               </button>
 
-              <div className="w-auto h-12 radio-logo  rounded-full flex items-center justify-center cursor-pointer mr-0 ">
-                <Image src={radio} alt="Ajab Shahar" />
+              <div className="w-auto h-12 radio-logo rounded-full flex items-center justify-center cursor-pointer mr-0">
+                <Image src={radio} alt="Ajab Shahar Radio" />
               </div>
 
-              {/* Mobile menu button */}
+              {/* Mobile menu toggle */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="md:hidden p-2 pl-0 text-gray-600 hover:text-gray-900 transition-colors"
@@ -84,7 +91,9 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-lg font-medium text-gray-800 hover:text-gray-600 transition-colors tracking-wide uppercase"
+                    className={`nav-link text-lg font-medium ${
+                      pathname === item.href ? 'active' : ''
+                    }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
