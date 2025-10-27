@@ -21,12 +21,12 @@ export default function SongCard(item: Song) {
   return (
     <div className="bg-white song-card-list shadow-lg hover:shadow-xl transition-shadow duration-300">
       {/* Always show an image */}
-      <div className="relative w-full h-[186px] video-custom-width">
+      <div className="relative w-full h-[156px] video-custom-width">
         <Image
           src={thumbnail}
           alt={item.metaTitle || 'Song thumbnail'}
           width={400}
-          height={186}
+          height={156}
           className="object-cover  w-full h-full"
           priority
         />

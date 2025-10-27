@@ -64,6 +64,7 @@ button.fillter-btn {
 
 .reflections-card {
   max-width: 288px;
+  box-shadow: 8px 0 12px -4px rgba(0, 0, 0, 0.1);
 }
 
 .reflections-card-landing-p {

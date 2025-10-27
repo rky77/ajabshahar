@@ -115,11 +115,11 @@ button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.
 .song-semi-heading {
   color: #828282;
   font-family: 'lora-italic';
-  font-family: lo;
   font-size: 20px;
   font-style: italic;
   font-weight: 400;
   line-height: normal;
+  margin: 4px 0 0;
 }
 .son-card-text {
   color: #4f4f4f;
@@ -182,6 +182,7 @@ button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.
   left: 0;
   height: 22px;
   z-index: 10;
+  top: -16px;
 }
 
 @media screen and (max-width: 767px) {
