@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -11,7 +11,6 @@ import ajabNewsLogo from '../public/ajab-news-fly.png';
 import ajabNewsText from '../public/ajab-news-text.png';
 import PrevIcon from '../public/left-arrow.svg';
 import NextIcon from '../public/right-arrow.svg';
-import popUpBg from '../public/pop-up-bg.webp';
 
 import type { ContentItem } from '@/lib/data';
 import ContentCard from './ContentCard';
@@ -36,11 +35,23 @@ export default function ContentSliderModal({
   const nextRef = useRef<HTMLButtonElement | null>(null);
   const swiperRef = useRef<any>(null);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center news-pop-up-modal overflow-y-auto">
-      <div className="relative w-full max-w-[900px] h-[830px] flex items-center justify-center mx-auto mt-[180px] mb-10 bg-[url('../public/pop-up-bg.webp')] bg-contain bg-center bg-no-repeat">
+    <div className="fixed inset-0 z-50 flex items-start justify-center news-pop-up-modal overflow-y-auto bg-black/50 backdrop-blur-sm">
+      <div className="relative w-full max-w-[900px] h-[830px] flex items-center justify-center mx-auto mt-[100px] mb-10 bg-[url('../public/pop-up-bg.webp')] bg-contain bg-center bg-no-repeat">
         {/* Scrollable inner content */}
         <div className="relative flex flex-col items-center justify-start max-w-[620px] w-full bg-transparent rounded-2xl py-4 mx-auto  max-h-[720px]">
           {/* Header */}
