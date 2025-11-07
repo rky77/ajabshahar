@@ -179,4 +179,27 @@
 }
 
 @media screen and (max-width: 768px) {
+  .home-song-card {
+    transform: translate(0);
+    margin: 0 auto;
+  }
+  .poem-card-container {
+    margin: 186px auto 186px;
+    display: flex;
+    justify-content: center;
+  }
+  .people-card-container {
+    transform: translate(0);
+    margin: 186px 0;
+    width: 100%;
+  }
+  .people-card-container {
+    transform: translate(0%);
+    margin: 186px auto;
+    width: 100%;
+  }
+  .film-card-container {
+    transform: translate(0);
+    margin: 0 auto;
+  }
 }
