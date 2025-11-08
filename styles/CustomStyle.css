@@ -74,7 +74,7 @@
   font-size: 24px;
   line-height: normal;
   color: #6d6e71;
-  margin: 0 0 6px;
+  margin: 2px 0 6px;
   font-family: 'lora-italic';
 }
 .semi-heading-2 {
@@ -85,7 +85,7 @@
   margin: 0;
 }
 .card-text {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 25px;
   color: #6d6e71;
   margin: 15px 0 34px;
@@ -145,7 +145,7 @@
   background-size: 100%;
   max-width: 1420px;
   margin: 0 auto;
-  padding: 0 0 200px 0;
+  padding: 0 0 100px 0;
 }
 
 /* Apply padding only for cards with no video/image */
@@ -161,7 +161,7 @@
   transform: translate(46%);
 }
 .reflection-card-container .semi-heading-2 {
-  margin: 0;
+  margin: 8px 0 0;
 }
 .poem-card-container {
   /* transform: translate(49%);*/
@@ -179,6 +179,21 @@
 }
 .film-card-container {
   transform: translate(48%);
+}
+
+@media screen and (max-width: 1480px) {
+  .full-background-home-page {
+    max-width: 1280px;
+  }
+  .card-heading {
+    font-size: 30px;
+  }
+  .semi-heading {
+    font-size: 22px;
+  }
+  .semi-heading-2 {
+    font-size: 17px;
+  }
 }
 
 @media screen and (max-width: 768px) {

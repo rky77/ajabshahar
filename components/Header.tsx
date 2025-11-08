@@ -69,7 +69,7 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
                 <Search className="w-8 h-8" />
               </button>
 
-              <div className="w-auto h-12 radio-logo rounded-full flex items-center justify-center cursor-pointer mr-0">
+              <div className="w-auto h-11 radio-logo rounded-full flex items-center justify-center cursor-pointer mr-0">
                 <Image src={radio} alt="Ajab Shahar Radio" />
               </div>
 

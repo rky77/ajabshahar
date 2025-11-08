@@ -47,7 +47,7 @@ export default function Reflection() {
             {reflectionData.metaTitle}
           </h3>
           {reflectionData.director && (
-            <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3 line-clamp-1 overflow-hidden text-ellipsis">
+            <p className="text-xs semi-heading-2 font-medium text-gray-500  tracking-wide mb-3 line-clamp-1 overflow-hidden text-ellipsis">
               {reflectionData.director}
             </p>
           )}

@@ -19,6 +19,14 @@ header nav a,
 .nav-link.active {
   color: #e31e79;
 }
+
+@media screen and (max-width: 1480px) {
+  header nav a,
+  .about-text {
+    font-size: 22px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   header {
     transition: none;

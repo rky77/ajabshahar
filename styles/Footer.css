@@ -132,6 +132,11 @@ button.pink {
   font-size: 1.14rem;
   letter-spacing: 0.9px;
 }
+@media screen and (max-width: 1480px) {
+  .footer-bg {
+    margin-top: -250px;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   .footer-inner {
