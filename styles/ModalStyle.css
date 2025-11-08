@@ -38,21 +38,18 @@
   box-shadow: none;
 }
 .card-shape-top {
-  margin: 20px 0 0;
+  margin: 10px 0 0;
   padding: 0 20px;
   box-sizing: border-box;
 }
 .card-heading {
-  color: #4d4d4d;
+  color: #e31e79;
   font-family: Lora;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 400;
   line-height: normal;
 }
-.semi-heading,
-.semi-heading-2 {
-  display: none;
-}
+
 .pop-up-margin-top {
   margin: 150px 0 0;
 }
@@ -61,8 +58,6 @@
 }
 
 .border-top-pink {
-  border-top: none;
-  padding: 0rem 0 0;
   box-sizing: border-box;
 }
 .news-pop-up-modal .card-shape-top .justify-end {

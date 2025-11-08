@@ -14,7 +14,7 @@
   padding: 4px 4px 0 4px;
 }
 .border-top-pink {
-  border-top: 1px solid var(--main-pink-color);
+  border-top: 1px solid #e31e79;
   padding: 1rem 0 0;
   box-sizing: border-box;
 }
@@ -28,7 +28,7 @@
   width: 100%;
   background-size: cover;
   position: absolute;
-  top: -39px;
+  top: -31px;
   left: 0;
   height: 33px;
   z-index: 10;
@@ -59,6 +59,9 @@
 .vide-custom-width img {
   padding: 4px 0 0;
 }
+.frame-radius {
+  border-radius: 5px 5px 0 0;
+}
 .card-heading {
   color: var(--main-pink-color);
   line-height: normal;
@@ -71,7 +74,7 @@
   font-size: 24px;
   line-height: normal;
   color: #6d6e71;
-  margin: 0;
+  margin: 0 0 6px;
   font-family: 'lora-italic';
 }
 .semi-heading-2 {

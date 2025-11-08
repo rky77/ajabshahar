@@ -26,7 +26,7 @@ export default function Reflection() {
           <iframe
             src={`${YOUTUBE_URL}/${reflectionData.youtubeVideoId}`}
             title={reflectionData.metaTitle}
-            className="h-full w-full rounded-t-lg"
+            className="h-full w-full frame-radius "
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />

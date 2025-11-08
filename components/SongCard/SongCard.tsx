@@ -23,17 +23,12 @@ export default function SongCard(item: Song) {
             <iframe
               src={`${YOUTUBE_URL}/${item.youtubeVideoId}`}
               title={item.metaTitle}
-              className="h-full w-full rounded-t-lg"
+              className="h-full w-full frame-radius"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
           ) : (
-            <Image
-              src={item.thumbnailURL}
-              alt={item.metaTitle}
-              fill
-              className="object-cover rounded-t-lg"
-            />
+            <Image src={item.thumbnailURL} alt={item.metaTitle} fill className="object-cover" />
           )}
         </div>
       )}

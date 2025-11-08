@@ -26,7 +26,7 @@ export default function ContentCard({ item }: ContentCardProps) {
               <iframe
                 src={item.video.replace('watch?v=', 'embed/')}
                 title={item.title}
-                className="h-full w-full card-rounded-4"
+                className="h-full w-full frame-radius"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
