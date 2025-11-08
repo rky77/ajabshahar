@@ -3,13 +3,13 @@
 }
 
 .footer-bg {
-  background: url(/footer-black-bg.svg) -1px 0px no-repeat;
-  background-size: cover;
+  background: url(/footer-black-bg-v2.svg) -1px 0px no-repeat;
   position: relative;
   padding: 80px 0 0 0;
   box-sizing: border-box;
   margin-top: -230px;
   box-sizing: border-box;
+  background-position: center;
 }
 footer {
   background: #000;
@@ -19,11 +19,11 @@ footer {
 }
 .footer-content-max-width {
   max-width: 100%;
-  margin: 0 auto;
 }
 .footer-border {
+  max-width: 1380px;
   margin: 3rem auto 0;
-  border-top: 1px solid #828282;
+  background: transparent url(/news-border.svg) repeat-x;
 }
 .footer-content {
   width: 100%;
@@ -60,13 +60,12 @@ footer {
 .footer-text {
   font-size: 14px;
   color: #b3b3b3;
+  margin: 24px 0 0;
 }
 .footer-text span {
   color: #fff;
 }
-.footer-content > div {
-  width: 120%;
-}
+
 button.pink {
   color: var(--main-pink-color);
   font-size: 1.14rem;
@@ -87,7 +86,7 @@ button.pink {
 .footer-content a {
   width: fit-content;
   color: var(--main-pink-color);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   line-height: normal;
 }
@@ -95,34 +94,38 @@ button.pink {
 .pink {
   color: var(--main-pink-color);
 }
+.footer-heading-text {
+  color: #e31e79;
+  font-size: 28px;
+  line-height: 28px;
+  margin: 0 0 16px;
+  font-family: 'Lora', serif;
+  font-weight: 400;
+}
+.footer-support-seaction {
+  margin: 42px 0 0;
+}
 .footer-heading-text a {
   font-family: 'Lora', serif;
   font-weight: 400;
   line-height: normal;
   font-size: 28px;
+  line-height: 28px;
 }
 
-.footer-bg::before {
-  content: ' ';
-  background: url(/tree.svg) no-repeat;
-  background-size: cover;
-  position: absolute;
-  top: 32px;
-  height: 60px;
-  width: 60px;
-  right: 13%;
-}
 .footer-inner {
-  max-width: 1300px;
+  max-width: 1320px;
   display: flex;
-  margin: 0 auto;
-  gap: 13rem;
+  margin: 30px auto 0;
+  gap: 10rem;
 }
-.text-gray {
+.text-gray-footer {
   color: #e6e6e6;
-  font-size: 18px;
+  font-size: 17px;
+  line-height: 27px;
   letter-spacing: 1px;
 }
+
 #email-subscrib::placeholder {
   color: #e6e6e6 !important;
   opacity: 1 !important;

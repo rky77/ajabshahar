@@ -1,41 +1,38 @@
-"use client";
+'use client';
 
-import type React from "react";
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { footerLinks, contentData } from "@/lib/data";
-import "../styles/Footer.css";
-import Image from "next/image";
-import footerLogo from "../public/footer-logo.svg";
+import type React from 'react';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { footerLinks, contentData } from '@/lib/data';
+import '../styles/Footer.css';
+import Image from 'next/image';
+import footerLogo from '../public/footer-logo.svg';
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
   const [showAjabNews, setShowAjabNews] = useState(false);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
-    setEmail("");
+    setEmail('');
   };
 
   return (
     <footer className="text-white footer-bg relative">
-      <div className="tree-icon"></div>
-      <div className=" pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+      <div className="pt-26 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="footer-content-max-width mx-auto">
           <div className="footer-inner">
             {/* About Section */}
             <div className="footer-content">
               <h3 className="footer-heading-text">About</h3>
-              <p className="text-gray">
-                Ajab Shahar is a wondrous city of songs, poems and conversations
-                from Bhakti, Sufi and Baul oral traditions from India and
-                beyond.
+              <p className="text-gray-footer">
+                Ajab Shahar is a wondrous city of songs, poems and conversations from Bhakti, Sufi
+                and Baul oral traditions from India and beyond.
               </p>
-              <div className="mt-6">
+              <div className="footer-support-seaction">
                 <h3 className="footer-heading-text">Support</h3>
-                <p className="text-gray max-w-[70%]">
-                  If you have found joy and value here, consider supporting this
-                  work.
+                <p className="text-gray-footer">
+                  If you have found joy and value here, consider supporting this work.
                 </p>
               </div>
             </div>
@@ -47,11 +44,11 @@ export default function Footer() {
                   Ajab News
                 </Link>
               </h3>
-              <p className="text-gray mb-4">
+              <p className="text-gray-footer mb-4 w-[60%]">
                 To receive news, inspirations and more from us...
               </p>
 
-              <form onSubmit={handleSubscribe} className="flex">
+              <form onSubmit={handleSubscribe} className="flex footer-form">
                 <input
                   type="email"
                   placeholder="Email"
@@ -70,20 +67,20 @@ export default function Footer() {
               </form>
 
               <div className="mt-4">
-                <p className="text-gray text-sm mb-2">
-                  Write to us at{" "}
+                <p className="text-gray-footer text-sm mb-2">
+                  Write to us at{' '}
                   <a href="mailto:ajabshahar@gmail.com" className="pink">
                     ajabshahar@gmail.com
                   </a>
                 </p>
-                <p className="text-gray text-sm">
-                  Follow us on{" "}
+                <p className="text-gray-footer text-sm">
+                  Follow us on{' '}
                   {footerLinks.social.map((link, index) => (
                     <span key={link.name}>
                       <a href={link.href} className="pink">
                         {link.name}
                       </a>
-                      {index < footerLinks.social.length - 1 && " | "}
+                      {index < footerLinks.social.length - 1 && ' | '}
                     </span>
                   ))}
                 </p>
@@ -91,9 +88,9 @@ export default function Footer() {
             </div>
 
             {/* Navigation Links */}
-            <div className="footer-content flex flex-col gap-3">
+            <div className="footer-content flex flex-col gap-5 mt-0.5">
               {footerLinks.main.map((link) =>
-                link.name === "Ajab News" ? (
+                link.name === 'Ajab News' ? (
                   <button
                     key={link.name}
                     onClick={() => setShowAjabNews(true)}
@@ -102,11 +99,7 @@ export default function Footer() {
                     {link.name}
                   </button>
                 ) : (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className="pink text-sm transition-colors"
-                  >
+                  <Link key={link.name} href={link.href} className="pink text-sm transition-colors">
                     {link.name}
                   </Link>
                 )
@@ -116,18 +109,43 @@ export default function Footer() {
 
           {/* Bottom Section */}
           <div className="mt-12 pt-8 footer-border text-center">
-            <div className="flex justify-center mb-4">
-              <Image
-                src={footerLogo}
-                alt="Ajab Shahar"
-                width={130}
-                height={130}
-              />
+            <div className="flex justify-center footer-logo">
+              <Image src={footerLogo} alt="Ajab Shahar" width={130} height={130} />
             </div>
-            <p className="text-gray-400 text-xs footer-text">
-              Website Design <span>Smriti Chanchani</span> | Created by the
-              <span> Kabir Project</span> at{" "}
-              <span> Shabad Dhun Foundation</span>
+            <p className="text-gray-footer-400 text-xs footer-text">
+              Website Design{' '}
+              <span>
+                <a
+                  href="https://dhoopchhaonstudio.format.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="no-underline hover:underline hover:text-gray-300 transition-colors"
+                >
+                  Smriti Chanchani
+                </a>
+              </span>{' '}
+              | Created by the{' '}
+              <span>
+                <a
+                  href="https://kabirproject.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="no-underline hover:underline hover:text-gray-300 transition-colors"
+                >
+                  Kabir Project
+                </a>
+              </span>{' '}
+              at{' '}
+              <span>
+                <a
+                  href="http://shabadhunfoundation.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="no-underline hover:underline hover:text-gray-300 transition-colors"
+                >
+                  Shabad Dhun Foundation
+                </a>
+              </span>
             </p>
           </div>
         </div>
