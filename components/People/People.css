@@ -48,6 +48,7 @@ span.filter {
   font-weight: 600;
   line-height: normal;
   letter-spacing: 0.869px;
+  display: flex;
 }
 .filters::after {
   content: ' |';
