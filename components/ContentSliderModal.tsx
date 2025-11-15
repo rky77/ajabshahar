@@ -15,6 +15,7 @@ import NextIcon from '../public/right-arrow.svg';
 import type { ContentItem } from '@/lib/data';
 import ContentCard from './ContentCard';
 import '../styles/ModalStyle.css';
+import { Laptop } from 'lucide-react';
 
 interface ContentSliderModalProps {
   items: ContentItem[];
@@ -30,6 +31,19 @@ export default function ContentSliderModal({
   initialIndex = 0,
 }: ContentSliderModalProps) {
   const [activeIndex, setActiveIndex] = useState(initialIndex);
+  const [isSmall, setIsSmall] = useState(false);
+
+  // Height for latop device
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmall(window.innerWidth < 1580);
+    };
+
+    handleResize(); // run on mount
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
@@ -51,7 +65,13 @@ export default function ContentSliderModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center news-pop-up-modal overflow-y-auto bg-black/50 backdrop-blur-sm">
-      <div className="relative w-full max-w-[900px] h-[830px] flex items-center justify-center mx-auto mt-[60px] mb-10 bg-[url('../public/pop-up-bg.webp')] bg-contain bg-center bg-no-repeat">
+      <div
+        className={`relative w-full max-w-[900px] 
+      ${isSmall ? 'h-[750px]' : 'h-[830px]'} 
+      flex items-center justify-center mx-auto mt-[60px] mb-10 
+      bg-[url('../public/pop-up-bg.webp')] bg-contain bg-center bg-no-repeat
+    `}
+      >
         {/* Scrollable inner content */}
         <div className="relative flex flex-col items-center justify-start max-w-[620px] w-full bg-transparent rounded-2xl py-4 mx-auto  max-h-[720px]">
           {/* Header */}

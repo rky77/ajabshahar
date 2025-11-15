@@ -63,6 +63,7 @@
 .news-pop-up-modal .card-shape-top .justify-end {
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 15px;
 }
 .modal-content-inner {
   top: 50%;
