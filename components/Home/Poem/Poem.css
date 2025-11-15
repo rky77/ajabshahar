@@ -37,5 +37,11 @@
   font-style: italic;
   font-family: 'lora-italic';
 }
+@media screen and (max-width: 1580px) {
+  .poem-card-box-wrapper {
+    max-width: 450px;
+    min-width: 450px;
+  }
+}
 
 /* Poem Css end */

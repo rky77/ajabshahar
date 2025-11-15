@@ -22,7 +22,7 @@ export default function FilmCard() {
   return (
     <div className="bg-white card-rounded-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
       {/* Media - Always shown now */}
-      <div className="relative h-60 w-full video-custom-width">
+      <div className="relative h-50 w-full video-custom-width">
         {filmData.youtubeVideoId ? (
           <iframe
             src={`${YOUTUBE_URL}/${filmData.youtubeVideoId}`}

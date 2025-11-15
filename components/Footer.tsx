@@ -44,8 +44,8 @@ export default function Footer() {
                   Ajab News
                 </Link>
               </h3>
-              <p className="text-gray-footer mb-4 w-[60%]">
-                To receive news, inspirations and more from us...
+              <p className="text-gray-footer mb-4 w-[80%]">
+                Sign up with us to recieve news, inspirations and more...
               </p>
 
               <form onSubmit={handleSubscribe} className="flex footer-form">
@@ -68,13 +68,13 @@ export default function Footer() {
 
               <div className="mt-4">
                 <p className="text-gray-footer text-sm mb-2">
-                  Write to us at{' '}
+                  Write to{' '}
                   <a href="mailto:ajabshahar@gmail.com" className="pink">
                     ajabshahar@gmail.com
                   </a>
                 </p>
                 <p className="text-gray-footer text-sm">
-                  Follow us on{' '}
+                  Find us on{' '}
                   {footerLinks.social.map((link, index) => (
                     <span key={link.name}>
                       <a href={link.href} className="pink">

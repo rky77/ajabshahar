@@ -18,7 +18,7 @@ export default function SongCard(item: Song) {
     >
       {/* Media */}
       {hasMedia && (
-        <div className="relative h-60 w-full video-custom-width">
+        <div className="relative h-50 w-full video-custom-width">
           {item.youtubeVideoId ? (
             <iframe
               src={`${YOUTUBE_URL}/${item.youtubeVideoId}`}
@@ -45,21 +45,33 @@ export default function SongCard(item: Song) {
         }`}
       >
         <div className="mb-2">
-          <h3 className="card-heading font-semibold mb-1">{item.metaTitle}</h3>
-          {item.songTitle.englishTranslation && (
+          <h3 className="card-heading font-semibold mb-1">
+            {/* {item.metaTitle} */}
+            Main Nijaam Se Naina
+          </h3>
+          <p className="text-sm lora-italic mb-2 semi-heading">I Lost My Heart To Nizam’s Glance</p>
+          {/* {item.songTitle.englishTranslation && (
             <p className="text-sm lora-italic mb-2 semi-heading">
               {item.songTitle.englishTranslation}
             </p>
-          )}
-          {item.poets[0]?.name && (
-            <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3">
-              <span className="lowercase">says</span> {item.poets[0]?.name}
-            </p>
-          )}
+          )} */}
+          {/* {item.poets[0]?.name && ( */}
+          {/* <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3">
+            <span className="lowercase">says</span> {item.poets[0]?.name}
+          </p> */}
+          <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3">
+            <span className="lowercase">says</span> FARID AYAZ & ABU MOHAMMED
+          </p>
+          <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3">
+            <span className="lowercase">poet</span> AMIR KHUSRO
+          </p>
         </div>
 
         <p className="card-text leading-relaxed mb-4 border-top-pink line-clamp-5 overflow-hidden text-ellipsis">
-          {item.metaDescription}
+          {/* {item.metaDescription} */}
+          The delicacy of locking eyes with the beloved and losing one’s heart to him combines in
+          this song with a delightful disregard for social convention, represented by the gossiping
+          neighbourhood women ...
         </p>
 
         <div className={`${!hasMedia ? 'justify-center' : 'justify-end'} flex`}>

@@ -18,7 +18,7 @@ export default function SongCard(item: Song) {
     >
       {/* Media */}
       {hasMedia && (
-        <div className="relative h-60 w-full video-custom-width">
+        <div className="relative h-50 w-full video-custom-width">
           {item.youtubeVideoId ? (
             <iframe
               src={`${YOUTUBE_URL}/${item.youtubeVideoId}`}

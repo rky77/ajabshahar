@@ -21,7 +21,7 @@ export default function Reflection() {
   return (
     <div className="bg-white card-rounded-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
       {/* Media - Always shown now */}
-      <div className="relative h-60 w-full video-custom-width">
+      <div className="relative h-50 w-full video-custom-width">
         {reflectionData.youtubeVideoId ? (
           <iframe
             src={`${YOUTUBE_URL}/${reflectionData.youtubeVideoId}`}

@@ -51,11 +51,11 @@ export default function ContentSliderModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center news-pop-up-modal overflow-y-auto bg-black/50 backdrop-blur-sm">
-      <div className="relative w-full max-w-[900px] h-[830px] flex items-center justify-center mx-auto mt-[100px] mb-10 bg-[url('../public/pop-up-bg.webp')] bg-contain bg-center bg-no-repeat">
+      <div className="relative w-full max-w-[900px] h-[830px] flex items-center justify-center mx-auto mt-[60px] mb-10 bg-[url('../public/pop-up-bg.webp')] bg-contain bg-center bg-no-repeat">
         {/* Scrollable inner content */}
         <div className="relative flex flex-col items-center justify-start max-w-[620px] w-full bg-transparent rounded-2xl py-4 mx-auto  max-h-[720px]">
           {/* Header */}
-          <div className="flex items-center justify-between w-full pt-4 px-2 pb-3 bg-white rounded-t-2xl sticky top-0 z-10">
+          <div className="flex items-center justify-between w-full pt-3 px-2 pb-3 bg-white rounded-t-2xl sticky top-0 z-10">
             <div className="news-logo">
               <Image src={ajabNewsLogo} alt="Ajab News" />
             </div>

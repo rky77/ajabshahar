@@ -10,7 +10,7 @@
 
 /* Ensure the modal container has proper spacing */
 .modal-container {
-  padding: 1rem 0;
+  padding: 16px 0 0;
 }
 
 /* Style adjustments for content cards in modal */
@@ -67,4 +67,16 @@
 .modal-content-inner {
   top: 50%;
   transform: translateY(-50%);
+}
+
+.news-pop-up-modal .semi-heading,
+.news-pop-up-modal .semi-heading-2 {
+  display: none;
+}
+.news-pop-up-modal .border-top-pink {
+  border-top: 1px solid #fff;
+  padding: 0;
+}
+.news-pop-up-modal .card-heading {
+  color: #6d6e71;
 }
