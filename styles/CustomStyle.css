@@ -165,7 +165,7 @@
 }
 .poem-card-container {
   /* transform: translate(49%);*/
-  margin: 186px 10% 186px 0;
+  margin: 186px 13% 186px 0;
   display: flex;
   justify-content: flex-end;
 }
@@ -200,6 +200,15 @@
   .reflection-card-container {
     max-width: 425px;
     width: 100%;
+  }
+  .reflection-card-container {
+    transform: translate(45%);
+  }
+  .film-card-container {
+    transform: translate(70%);
+  }
+  .home-song-card {
+    transform: translate(75%);
   }
 }
 

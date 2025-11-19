@@ -67,7 +67,7 @@ export default function Footer() {
               </form>
 
               <div className="mt-4">
-                <p className="text-gray-footer text-sm mb-2">
+                <p className="text-gray-footer text-sm">
                   Write to{' '}
                   <a href="mailto:ajabshahar@gmail.com" className="pink">
                     ajabshahar@gmail.com
