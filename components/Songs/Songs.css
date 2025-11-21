@@ -17,14 +17,14 @@
 }
 .songs-about-intro {
   color: #575756;
-  font-family: 'lora-italic';
   background: transparent;
-  font-size: 20px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: normal;
+  font-size: 19px;
+  line-height: 28px;
   max-width: 1055px;
   margin: 0 auto 50px;
+}
+button.fillter-btn {
+  font-size: 20px;
 }
 
 .black-custom-color {
@@ -55,6 +55,12 @@ button.fillter-btn {
   border-right: 1px solid #fff;
   margin: 0 10px;
 } */
+.song-card-list .video-custom-width img {
+  border-radius: 4px 4px 0 0;
+}
+.song-card-list {
+  border-radius: 4px 4px 0 0;
+}
 .filters {
   color: #e31e79;
   font-family: 'Merriweather Sans';
@@ -115,9 +121,7 @@ button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.
 }
 .song-semi-heading {
   color: #828282;
-  font-family: 'lora-italic';
   font-size: 20px;
-  font-style: italic;
   font-weight: 400;
   line-height: normal;
   margin: 4px 0 0;
@@ -183,7 +187,44 @@ button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.
   left: 0;
   height: 22px;
   z-index: 10;
-  top: -16px;
+  top: -18px;
+}
+
+@media screen and (max-width: 1580px) {
+  .inner-container-common {
+    max-width: 1240px;
+    width: 100%;
+  }
+  .filters {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.869px;
+    display: flex;
+  }
+  .song-count-text {
+    font-size: 25px;
+  }
+  button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.text-pink.text-white {
+    font-size: 18px;
+  }
+  .song-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 52px;
+    max-width: 1000px;
+  }
+  .song-card-landing-p {
+    max-width: 270px;
+  }
+  .song-card-heading {
+    font-size: 22px;
+  }
+  .song-semi-heading {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 767px) {

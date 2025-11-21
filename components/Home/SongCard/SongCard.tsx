@@ -60,7 +60,7 @@ export default function SongCard(item: Song) {
             <span className="lowercase">says</span> {item.poets[0]?.name}
           </p> */}
           <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3">
-            <span className="lowercase">says</span> FARID AYAZ & ABU MOHAMMED
+            <span className="lowercase">sing</span> FARID AYAZ & ABU MOHAMMED
           </p>
           <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3">
             <span className="lowercase">poet</span> AMIR KHUSRO

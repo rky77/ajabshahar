@@ -32,10 +32,7 @@ export default function FilterPanel() {
   return (
     <div className="relative inline-block">
       {/* Trigger */}
-      <button
-        onClick={togglePanel}
-        className="text-pink-600 font-semibold hover:text-pink-700 transition-colors"
-      >
+      <button onClick={togglePanel} className="text-pink font-semibold  transition-colors">
         Filters
       </button>
 
