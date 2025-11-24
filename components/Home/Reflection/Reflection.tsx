@@ -13,7 +13,7 @@ export default function Reflection() {
     metaTitle: 'Shoonya is not nothingness',
     metaDescription:
       "Nothing has its own intrinsic character. Everything exists in relation to something else. The name of this realization is 'shoonya'",
-    director: 'says1 KRISHNA NATH',
+    director: 'says KRISHNA NATH',
     youtubeVideoId: 'your-video-id',
     thumbnailURL: '/path-to-thumbnail.jpg',
   };

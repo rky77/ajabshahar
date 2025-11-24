@@ -35,7 +35,7 @@ span.filter {
   color: #828282;
   font-family: 'Merriweather Sans';
   background: transparent;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 300;
   line-height: normal;
   letter-spacing: 0.84px;
@@ -43,7 +43,7 @@ span.filter {
 .filters {
   color: #e31e79;
   font-family: 'Merriweather Sans';
-  font-size: 21px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -92,10 +92,9 @@ button.fillter-btn {
 }
 .people-about-intro {
   color: #575756;
-  font-family: 'lora-italic';
   background: transparent;
   font-size: 20px;
-  font-style: italic;
+  line-height: 28px;
   font-weight: 400;
   line-height: normal;
   max-width: 1055px;
@@ -191,4 +190,21 @@ button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.
   filter: drop-shadow(7px 7px 10px rgba(0, 0, 0, 0.1));
   padding: 0 5px 5px;
   background: #fff;
+}
+
+@media screen and (max-width: 1580px) {
+  .inner-container-people {
+    max-width: 1240px;
+  }
+
+  .people-about-intro {
+    font-size: 19px;
+  }
+  .people-count-text {
+    font-size: 25px;
+  }
+  .people-card-inner-container {
+    margin: 60px auto 0;
+    max-width: 1000px;
+  }
 }

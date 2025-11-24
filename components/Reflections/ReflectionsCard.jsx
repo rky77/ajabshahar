@@ -50,7 +50,7 @@ export default function ReflectionsCard(item) {
           {/*  Speaker */}
           {speakerName && (
             <p className="reflections-semi-heading">
-              says1 <span className="name">{speakerName}</span>
+              says <span className="name">{speakerName}</span>
             </p>
           )}
 

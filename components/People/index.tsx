@@ -28,7 +28,7 @@ const People = () => {
       ) : (
         <div className="mt-8">
           {/* Main Content */}
-          <div className="max-w-[1240px] mx-auto px-4 pb-8">
+          <div className="max-w-[1180px] mx-auto px-4 pb-8">
             {/* Search Header */}
             <div className="text-center people-about-intro">{PEOPLE_INTRO}</div>
 
@@ -67,7 +67,7 @@ const People = () => {
                     <div key={item.id} className="bg-white">
                       <div className="flex flex-col md:flex-row gap-6 people-card-wrp">
                         {/* Image */}
-                        <div className="flex-shrink-0 w-full md:w-[442px]">
+                        <div className="flex-shrink-0 w-full md:w-[422px]">
                           <div className="bg-gray-200 overflow-hidden h-[223px] news-banner-shadow">
                             {' '}
                             {/* 👈 fixed height */}
@@ -75,8 +75,8 @@ const People = () => {
                               <Image
                                 src={`${BASE_URL}${item?.thumbnailURL}`}
                                 alt={item?.metaTitle || item?.firstName}
-                                width={442}
-                                height={223}
+                                width={422}
+                                height={203}
                                 className="w-full h-full object-cover"
                               />
                             )}
@@ -124,7 +124,7 @@ const People = () => {
             </div>
 
             {/* Load More Button */}
-            {visibleCount < people.length && (
+            {/* {visibleCount < people.length && (
               <div className="text-center people-btn-container">
                 <button
                   onClick={handleLoadMore}
@@ -133,7 +133,7 @@ const People = () => {
                   Load More...
                 </button>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       )}

@@ -39,7 +39,7 @@ button.fillter-btn {
   color: #828282;
   font-family: 'Merriweather Sans';
   background: transparent;
-  font-size: 21px;
+  font-size: 2px;
   font-weight: 300;
   line-height: normal;
   letter-spacing: 0.84px;
@@ -224,6 +224,9 @@ button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.
   }
   .song-semi-heading {
     font-size: 18px;
+  }
+  button.fillter-btn {
+    font-size: 20px;
   }
 }
 
