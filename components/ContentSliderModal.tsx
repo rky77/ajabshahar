@@ -67,7 +67,7 @@ export default function ContentSliderModal({
     <div className="fixed inset-0 z-50 flex items-start justify-center news-pop-up-modal overflow-y-auto  backdrop-blur">
       <div
         className={`relative w-full max-w-[900px] 
-      ${isSmall ? 'h-[700px]' : 'h-[830px]'} 
+      ${isSmall ? 'h-[640px]' : 'h-[830px]'} 
       flex items-center justify-center mx-auto mt-[60px] mb-10 
       bg-[url('../public/pop-up-bg.webp')] bg-contain bg-center bg-no-repeat
     `}

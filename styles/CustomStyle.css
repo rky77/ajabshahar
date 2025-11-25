@@ -86,7 +86,7 @@
 }
 .card-text {
   font-size: 17px;
-  line-height: 25px;
+  line-height: 22px;
   color: #6d6e71;
   margin: 15px 0 34px;
 }
@@ -186,7 +186,7 @@
     max-width: 1260px;
   }
   .card-heading {
-    font-size: 30px;
+    font-size: 28px !important;
   }
   .semi-heading {
     font-size: 22px;
@@ -198,14 +198,14 @@
   .film-card-container,
   .people-card-container,
   .reflection-card-container {
-    max-width: 425px;
+    max-width: 405px;
     width: 100%;
   }
   .reflection-card-container {
     transform: translate(45%);
   }
   .film-card-container {
-    transform: translate(70%);
+    transform: translate(75%);
   }
   .home-song-card {
     transform: translate(75%);
