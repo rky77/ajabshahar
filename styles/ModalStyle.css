@@ -1,0 +1,88 @@
+.modal-container .bg-white,
+.modal-container .bg-white:hover {
+  box-shadow: none;
+}
+
+.modal-container .card-shape-top::before,
+.modal-container .card-shape-top::after {
+  display: none;
+}
+
+/* Ensure the modal container has proper spacing */
+.modal-container {
+  padding: 16px 0 0;
+}
+
+/* Style adjustments for content cards in modal */
+.modal-container .content-card {
+  border: none;
+  background: transparent;
+}
+.news-logo img {
+  max-width: 110px;
+  position: absolute;
+  left: -60px;
+  z-index: 10;
+  top: -29px;
+}
+.news-text img {
+  max-width: 150px;
+  position: absolute;
+  left: 35px;
+  z-index: 10;
+  top: 50%;
+}
+
+.card-text {
+  margin: 15px 0 12px;
+  box-shadow: none;
+}
+.card-shape-top {
+  margin: 10px 0 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.card-heading {
+  color: #e31e79;
+  font-family: Lora;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.pop-up-margin-top {
+  margin: 150px 0 0;
+}
+.pop-up-custom-outter-spacing {
+  padding: 120px 0 0;
+}
+
+.border-top-pink {
+  box-sizing: border-box;
+}
+.news-pop-up-modal .card-shape-top .justify-end {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+.modal-content-inner {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.news-pop-up-modal .semi-heading,
+.news-pop-up-modal .semi-heading-2 {
+  display: none;
+}
+.news-pop-up-modal .border-top-pink {
+  border-top: 1px solid #fff;
+  padding: 0;
+  font-size: 14px;
+}
+.news-pop-up-modal .card-heading {
+  color: #6d6e71;
+  font-size: 26px;
+}
+.news-pop-up-modal .pink {
+  font-size: 14px;
+}

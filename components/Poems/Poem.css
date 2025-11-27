@@ -1,0 +1,83 @@
+.poems-related-inner-container .button-font {
+  font-family: 'Merriweather Sans';
+  font-size: 22px;
+  font-weight: 300;
+  line-height: normal;
+  color: #282828;
+}
+
+button.border-0.button-font.cursor-pointer.transition-colors.button-active-text.font-semibold {
+  color: #ed1e79;
+}
+.poems-about {
+  color: #575756;
+  font-family: 'lora-italic';
+  background: transparent;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 1055px;
+  margin: 0 auto 50px;
+}
+
+span.see-all {
+  color: #e31e79;
+  font-family: 'Merriweather Sans';
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.869px;
+}
+.heading-border {
+  border-top: 1px solid #b1b1b1;
+}
+
+.black-custom-color {
+  color: #4d4d4d;
+}
+
+.text-pink {
+  color: #ed1e79;
+}
+
+button.fillter-btn {
+  color: #282828;
+}
+
+/* button.search-btn::before {
+  color: #282828;
+  margin: 0 10px;
+} */
+
+/* button.search-btn:first-child::before {
+  content: ' ';
+  border-right: 1px solid #fff;
+  margin: 0 10px;
+} */
+
+.inner-container-poems {
+  padding: 100px 0 200px;
+}
+.poems-heading-text {
+  color: #3c3c3b;
+  font-family: 'Lora', serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0 0 8px 0;
+  border-bottom: 1px solid #b1b1b1;
+}
+.see-all-btn {
+  color: #e31e79;
+  font-family: 'Merriweather Sans';
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.869px;
+}
+.button.fillter-btn:before {
+  display: none;
+}

@@ -1,0 +1,238 @@
+.inner-container-common {
+  background: url(/song-container-bg-v2.svg) left top;
+  background-size: 100% auto;
+  padding: 100px 0 140px;
+  max-width: 1420px;
+  width: 100%;
+  text-align: left;
+  margin: -30px auto 0;
+  min-height: 1300px;
+  font-weight: 300;
+  z-index: -100;
+}
+
+.button-font {
+  font-size: 15px;
+  font-weight: 300;
+}
+.songs-about-intro {
+  color: #575756;
+  background: transparent;
+  font-size: 19px;
+  line-height: 28px;
+  max-width: 1055px;
+  margin: 0 auto 50px;
+}
+button.fillter-btn {
+  font-size: 20px;
+}
+
+.black-custom-color {
+  color: #4d4d4d;
+}
+
+.text-pink {
+  color: #ed1e79;
+}
+
+button.fillter-btn {
+  color: #828282;
+  font-family: 'Merriweather Sans';
+  background: transparent;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.84px;
+}
+
+/* button.search-btn::before {
+  color: #282828;
+  margin: 0 10px;
+} */
+
+/* button.search-btn:first-child::before {
+  content: ' ';
+  border-right: 1px solid #fff;
+  margin: 0 10px;
+} */
+.song-card-list .video-custom-width img {
+  border-radius: 4px 4px 0 0;
+}
+.song-card-list {
+  border-radius: 4px 4px 0 0;
+}
+.filters {
+  color: #e31e79;
+  font-family: 'Merriweather Sans';
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.869px;
+  display: flex;
+}
+.filters::after {
+  content: '|';
+  font-size: 24px;
+  color: #828282;
+  font-weight: 300;
+  margin-left: 5px;
+}
+button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.text-pink.text-white {
+  color: #e31e79;
+  font-weight: 400;
+  font-size: 21px;
+}
+.all-text {
+  color: #828282;
+  font-family: 'Merriweather Sans';
+  font-size: 21px;
+  line-height: normal;
+  letter-spacing: 0.84px;
+}
+.song-count-text {
+  color: #3c3c3b;
+  font-family: 'Lora', serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.song-card-landing-p {
+  max-width: 288px;
+  width: 100%;
+  padding: 0;
+  box-shadow: 8px 0 12px -4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-radius: 4px 4px 0 0;
+}
+.song-card-heading {
+  color: #e31e79;
+  font-family: 'Lora', serif;
+  font-size: 24px;
+  line-height: normal;
+  font-style: normal;
+  font-weight: 400;
+}
+.button-link-container {
+  width: 91%;
+  justify-content: space-between;
+  display: flex;
+}
+.song-semi-heading {
+  color: #828282;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 4px 0 0;
+}
+.son-card-text {
+  color: #4f4f4f;
+  font-family: 'Merriweather Sans';
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 300;
+}
+.song-card-landing-p .card-shape-top {
+  min-height: 124px;
+}
+.song-card-landing-p .card-shape-top::after {
+  content: ' ';
+  background: url(/song-card-bottom-shadow.png) no-repeat;
+  width: 108%;
+  background-size: cover;
+  position: absolute;
+  bottom: -32px;
+  left: -5px;
+  height: 36px;
+  z-index: 10;
+}
+.song-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+  justify-content: space-between;
+  row-gap: 52px;
+  max-width: 1055px;
+  margin: 74px auto 160px;
+}
+.border-t-costom {
+  border-top: 1px solid #b1b1b1;
+  display: flex;
+  justify-content: space-around;
+}
+.news-inner-container {
+  background: url(/song-container-bg-v2.svg) left top;
+  background-size: 100% auto;
+  padding: 6.5rem 0 7rem;
+  max-width: 1420px;
+  width: 100%;
+  text-align: left;
+  margin: -30px auto 0;
+  min-height: 1300px;
+  font-weight: 300;
+}
+.seprator-all {
+  font-size: 20px;
+}
+.button.fillter-btn:before {
+  display: none;
+}
+.song-card-container .card-shape-top::before {
+  content: ' ';
+  background: url(/song-card-bottom.png) no-repeat;
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  height: 22px;
+  z-index: 10;
+  top: -18px;
+}
+
+@media screen and (max-width: 1580px) {
+  .inner-container-common {
+    max-width: 1240px;
+    width: 100%;
+  }
+  .filters {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.869px;
+    display: flex;
+  }
+  .song-count-text {
+    font-size: 25px;
+  }
+  button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.text-pink.text-white {
+    font-size: 18px;
+  }
+  .song-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 52px;
+    max-width: 1000px;
+  }
+  .song-card-landing-p {
+    max-width: 270px;
+  }
+  .song-card-heading {
+    font-size: 22px;
+  }
+  .song-semi-heading {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .song-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    row-gap: 52px;
+    margin: 74px 0 0;
+  }
+}

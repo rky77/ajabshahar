@@ -1,0 +1,120 @@
+.news-inner-container,
+.people-inner-container {
+  background: url(/news-white-bg.png) left top;
+  background-size: 100% auto;
+  padding: 6.5rem 0 7rem;
+  max-width: 1420px;
+  width: 100%;
+  text-align: left;
+  margin: -30px auto 0;
+  min-height: 1300px;
+  font-weight: 300;
+  z-index: -100;
+}
+
+.people-inner-container {
+  background: none;
+  margin-bottom: 120px;
+}
+.films-heading-text {
+  color: #3c3c3b;
+  font-family: 'Lora', serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0 0 8px 0;
+  border-bottom: 1px solid #b1b1b1;
+}
+
+.button-font {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.films-about {
+  color: #575756;
+  font-family: 'lora-italic';
+  background: transparent;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 1068px;
+  margin: 0 auto 50px;
+}
+.sub-heading-intro {
+  color: #4d4d4d;
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-size: 34px;
+  font-weight: 400;
+  margin: 50px 0 20px;
+}
+.black-custom-color {
+  color: #4d4d4d;
+}
+
+.text-pink {
+  color: #ed1e79;
+}
+.films-trailer {
+  font-size: 18px;
+}
+.films-trailer {
+  text-transform: uppercase;
+}
+.films-trailer span {
+  color: #6f6f72;
+}
+
+.people-banner-shadow {
+  box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  border-radius: 6px;
+}
+.films-separator {
+  border-color: #b1b1b1;
+}
+.card-separator {
+  border-bottom: 1px solid #9c9b9b;
+  max-width: 1032px;
+  margin: 60px auto;
+}
+.films-page-heading {
+  color: #575756;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 0 4px 0;
+  font-family: 'Lora', serif;
+}
+
+.films-page-heading span {
+  color: #6f6f72;
+  font-size: 18px;
+  font-family: 'lora-italic';
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 0 0 0.5rem;
+}
+.films-directed-title {
+  color: #6f6f72;
+  font-size: 18px;
+}
+.films-date {
+  color: #6f6f72;
+  font-size: 17px;
+  margin: 3px 0 0;
+}
+.search-result-text {
+  font-size: 18px;
+  line-height: 25px;
+  line-height: normal;
+  color: #6d6e71;
+}
+
+.thumbnail-image {
+  filter: drop-shadow(7px 7px 10px rgba(0, 0, 0, 0.1));
+  padding: 0 5px 5px;
+  background: #fff;
+}
