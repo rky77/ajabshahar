@@ -207,4 +207,8 @@ button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.
     margin: 60px auto 0;
     max-width: 1000px;
   }
+  .people-card-text,
+  .people-card-text p {
+    font-size: 16px;
+  }
 }
