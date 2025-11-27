@@ -30,15 +30,15 @@ const Films = () => {
             <div className="text-center films-about">{FILMS_CONSTANTS.FILMS_DESCRIPTION}</div>
 
             {/* Results */}
-            <div>
+            <div className="people-inner-card-container">
               {films.length
                 ? films.map((item: Film, index) => (
                     <div key={item.id} className="">
                       {/* Result Item */}
                       <div className="flex flex-col md:flex-row gap-6">
                         {/* Image */}
-                        <div className="flex-shrink-0 w-full md:w-[442px] h-[240px] people-banner-shadow">
-                          <div className="bg-gray-200 overflow-hidden h-[223px] relative">
+                        <div className="flex-shrink-0 w-full md:w-[422px] h-[220px] people-banner-shadow">
+                          <div className="bg-gray-200 overflow-hidden h-[203px] relative">
                             {item?.thumbnailUrl ? (
                               <Image
                                 src={`${BASE_URL}${item.thumbnailUrl}`}
@@ -97,7 +97,7 @@ const Films = () => {
                           {/* Description */}
                           {item?.profileText && (
                             <div
-                              className="search-result-text mb-3 line-clamp-3 text-base text-gray-700"
+                              className="film-card-text mb-3 line-clamp-3 text-base "
                               dangerouslySetInnerHTML={{
                                 __html: item.profileText,
                               }}
