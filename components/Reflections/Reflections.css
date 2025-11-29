@@ -1,5 +1,5 @@
 .inner-container-reflections {
-  background: url(/reflections_background.webp) no-repeat left top;
+  background: url(/reflection-background-v2.webp) no-repeat left top;
   background-size: 100% auto;
   padding: 100px 0 140px;
   max-width: 1420px;
@@ -17,10 +17,8 @@
 }
 .reflections-about {
   color: #575756;
-  font-family: 'lora-italic';
   background: transparent;
   font-size: 20px;
-  font-style: italic;
   font-weight: 400;
   line-height: normal;
   max-width: 760px;
@@ -33,7 +31,6 @@
 .reflections-card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 70px;
   justify-content: space-between;
   row-gap: 52px;
   max-width: 1020px;
@@ -50,8 +47,12 @@
 .fillter::after {
   content: ' |';
   color: #4f4f4f;
+  font-weight: 300;
   font-size: 20px;
   margin-left: 5px;
+}
+.card-heading {
+  line-height: normal;
 }
 .all {
   color: #4f4f4f;
@@ -78,12 +79,12 @@ button.fillter-btn {
 
 .reflections-semi-heading {
   color: #6f7071;
-  font-family: 'Merriweather Sans';
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
-  margin: 6px 0 16px;
+  margin: 6px 0 2px;
 }
+
 .reflections-semi-heading .name {
   text-transform: uppercase;
 }
@@ -101,9 +102,10 @@ button.fillter-btn {
   font-size: 16px;
   line-height: normal;
   font-weight: 300;
-  padding: 8px 0 0;
+  padding: 10px 0 0;
   border-top: 1px solid #e0e0e0;
 }
+
 .card-rounded-4 {
   border-radius: 5px 5px 0 0;
   height: fit-content;
@@ -114,6 +116,7 @@ button.fillter-btn {
   min-width: 291px;
   margin: 0 auto;
   left: -3px;
+  bottom: -25px;
   width: 100%;
 }
 .inner-container-reflections .card-shape-top::before {
@@ -136,4 +139,32 @@ button.fillter-btn {
 }
 .border-top-heading {
   border-top: 1px solid #b1b1b1;
+}
+.reflections-count-text {
+  font-family: 'Lora', serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1580px) {
+  .inner-container-reflections {
+    max-width: 1240px;
+    width: 100%;
+  }
+  .reflections-about {
+    font-size: 19px;
+  }
+  .reflections-count-text {
+    font-size: 25px;
+  }
+  .all {
+    color: #4f4f4f;
+    font-size: 19px;
+  }
+  .fillter {
+    font-size: 20px;
+  }
 }

@@ -28,7 +28,7 @@ export default function SearchResults() {
             </div>
 
             {/* Filter Tabs */}
-            <div className="flex flex-wrap justify-start gap-1 border-t-costom pt-3 pb-4">
+            <div className="flex flex-wrap justify-start gap-1 border-t-costom pt-3 pb-4 pr-2 pl-2">
               {/* ✅ Filter text replaced with FilterPanel */}
               <span className="text-pink filters">
                 <FilterPanel />

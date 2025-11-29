@@ -39,7 +39,7 @@ button.fillter-btn {
   color: #828282;
   font-family: 'Merriweather Sans';
   background: transparent;
-  font-size: 2px;
+  font-size: 21px;
   font-weight: 300;
   line-height: normal;
   letter-spacing: 0.84px;
@@ -96,6 +96,8 @@ button.border-0.button-font.all-text.cursor-pointer.uppercase.transition-colors.
   font-size: 27px;
   font-weight: 400;
   line-height: normal;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 .song-card-landing-p {

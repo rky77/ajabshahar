@@ -38,7 +38,7 @@ const People = () => {
             </div>
 
             {/* Filter Tabs */}
-            <div className="flex flex-wrap justify-start gap-1  border-t-costom pt-3 pb-4">
+            <div className="flex flex-wrap justify-start gap-1  border-t-costom pt-3 pb-4 pr-2 pl-2">
               <span className="text-pink  filters">Filters </span>
               <div className="button-link-container">
                 {PEOPLE_FILTER.map((filter) => (

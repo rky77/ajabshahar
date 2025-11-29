@@ -68,14 +68,12 @@ const Reflections = () => {
             <div className="text-center reflections-about mb-8">{REFLECTIONS_INTRO}</div>
 
             {/* Results Header */}
-            <div className="flex justify-between items-center mb-6">
-              <h1 className="text-2xl md:text-3xl font-light black-custom-color">
-                {totalResults} Reflections
-              </h1>
+            <div className="flex justify-between items-center mb-3">
+              <h1 className="reflections-count-text">{totalResults} Reflections</h1>
             </div>
 
             {/* Filter Tabs */}
-            <div className="flex flex-wrap justify-start gap-4 mb-8 border-top-heading pt-6 pb-4">
+            <div className="flex flex-wrap justify-start gap-4 mb-8 border-top-heading pt-3  pr-2 pl-2">
               <span className="text-pink fillter font-medium">Filters</span>
               <span className="all text-gray-600">All</span>
               {/* {REFLECTIONS_FILTER.map((filter) => (
