@@ -1,11 +1,11 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Image from "next/image";
-import FullBackground from "@/components/fullBackground";
-import Ajabnews from "@/components/ajab-news/News";
-import Loader from "@/components/Loader";
+'use client';
+import React, { useState, useEffect } from 'react';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import Image from 'next/image';
+import FullBackground from '@/components/fullBackground';
+import Ajabnews from '@/components/ajab-news/News';
+import Loader from '@/components/Loader';
 
 export default function NewsPage() {
   const [loading, setLoading] = useState(true);
@@ -30,12 +30,7 @@ export default function NewsPage() {
             ) : (
               <div className="mx-auto z-11">
                 <h1 className="flex justify-center">
-                  <Image
-                    src="/ajab-news-logo.svg"
-                    alt="Logo"
-                    width={300}
-                    height={100}
-                  />
+                  <Image src="/ajab-news-logo.svg" alt="Logo" width={240} height={100} />
                 </h1>
                 <div className="news-border"></div>
                 <Ajabnews />

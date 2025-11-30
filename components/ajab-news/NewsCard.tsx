@@ -45,7 +45,7 @@ export default function NewsCard() {
             <div className="flex-1">
               <h2 className="news-card-heading mb-2">
                 {item.title}
-                {item.subtitle && <span className="text-lg italic mb-2 ml-1">{item.subtitle}</span>}
+                {item.subtitle && <span className="text-lg  mb-2 ml-1">{item.subtitle}</span>}
               </h2>
 
               <p>{item.description}</p>

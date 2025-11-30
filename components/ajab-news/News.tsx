@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import './News.css';
 import NewsCard from './NewsCard';
@@ -78,6 +78,37 @@ function ToggleText({ text, maxChars = 200 }: { text: string; maxChars?: number 
 // 🔹 Image Slider Component
 function ImageSlider({ images }: { images: string[] }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [imageHeight, setImageHeight] = useState('auto');
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    // Function to update window width
+    const updateWindowWidth = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Set initial width
+    updateWindowWidth();
+
+    // Add event listener
+    window.addEventListener('resize', updateWindowWidth);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', updateWindowWidth);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Set image height based on window width
+    if (windowWidth === 0) return;
+
+    if (windowWidth < 1580) {
+      setImageHeight('400px');
+    } else {
+      setImageHeight('auto');
+    }
+  }, [windowWidth]);
 
   if (images.length === 0) return null;
 
@@ -91,17 +122,21 @@ function ImageSlider({ images }: { images: string[] }) {
 
   return (
     <>
-      <div className="relative mb-6 rounded-lg">
+      <div className="relative mb-6 news-card-slider-row">
         {/* Main Image */}
-        <div className="relative mb-2 rounded-lg w-full max-w-[853px] h-auto mx-auto news-banner-shadow">
+        <div className="relative mb-2 rounded-lg w-full max-w-[853px] h-auto mx-auto news-banner-shadow overflow-hidden">
           <img
             src={images[currentImageIndex]}
             alt="News image"
-            className="w-full h-auto object-contain"
+            className="w-full"
+            style={{
+              height: imageHeight,
+              maxHeight: imageHeight === 'auto' ? 'none' : imageHeight,
+            }}
           />
         </div>
 
-        {/* Navigation Arrows - unchanged */}
+        {/* Navigation Arrows */}
         {images.length > 1 && (
           <>
             <button
@@ -148,14 +183,14 @@ function ImageSlider({ images }: { images: string[] }) {
 // 🔹 Main News Component
 export default function Ajabnews() {
   return (
-    <div className="custom-inner-container mx-auto space-y-12 py-8">
+    <div className="custom-inner-container mx-auto">
       {newsData.map((news, index) => (
         <article key={news.id} className="bg-white">
           {/* Image Slider */}
           <ImageSlider images={news.images} />
 
           {/* Content Sections */}
-          <div className="prose prose-lg max-w-none">
+          <div className="news-detals-row">
             {news.content.map((section, sectionIndex) => (
               <div key={sectionIndex}>
                 {section.type === 'heading' ? (
@@ -171,7 +206,9 @@ export default function Ajabnews() {
           {index < newsData.length - 1 && <div className="mt-7 border-dotted-seprator"></div>}
         </article>
       ))}
-      <NewsCard />
+      <div className="news-thum-text-row">
+        <NewsCard />
+      </div>
     </div>
   );
 }
