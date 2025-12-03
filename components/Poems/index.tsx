@@ -1,7 +1,7 @@
 'use client';
 
 import Loader from '@/components/Loader';
-import useSongs from '@/hooks/use-songs';
+import usePoems from '@/hooks/use-poems';
 import { useState } from 'react';
 import { Song } from '../Home/SongCard/types';
 import { POEMS_FILTER, POEMS_INTRO } from './constants';
@@ -14,7 +14,7 @@ export default function Poems() {
   const [activeFilter, setActiveFilter] = useState(POEMS_FILTER[0]);
 
   //need to change once API for this is known
-  const { publishedSongs = [], isLoading, totalSongs } = useSongs({ activeFilter: activeFilter });
+  const { publishedPoems = [], isLoading, totalPoems } = usePoems({ activeFilter: activeFilter });
 
   return (
     <>
@@ -28,7 +28,7 @@ export default function Poems() {
             <div className="text-center poems-about">{POEMS_INTRO}</div>
             <div className="text-left mb-2">
               <h1 className="text-2xl md:text-3xl font-light black-custom-color mb-0 mt-0">
-                {totalSongs} songs
+                {totalPoems} poems
               </h1>
             </div>
 
@@ -47,26 +47,30 @@ export default function Poems() {
                 </button>
               ))} */}
             </div>
-            <PoemsSlider />
+            <PoemsSlider poems={publishedPoems} />
             <PoemsRelatedItem />
             <PoemsTags />
 
             {/* Results */}
-            {/* <div className="space-y-8">
-              {publishedSongs?.length > 0
-                ? publishedSongs.map((song: Song) => {
-                    const hasMedia = song.youtubeVideoId || song.thumbnailURL;
+            <div className="space-y-8">
+              {publishedPoems?.length > 0
+                ? publishedPoems.map((poem: any) => {
+                    const hasMedia = poem.thumbnail;
                     return (
                       <div
-                        key={song.id}
+                        key={poem.id}
                         className={`bg-white break-inside-avoid mb-6 product-card py-0.5 ${
                           !hasMedia ? 'no-media-padding' : ''
                         }`}
-                      ></div>
+                      >
+                        <h3 className="text-lg font-semibold">{poem.title}</h3>
+                        <p className="text-sm text-gray-600">By {poem.poets?.[0]?.name || 'Unknown Poet'}</p>
+                        <p className="text-sm">{poem.metaDescription}</p>
+                      </div>
                     );
                   })
                 : 'No results Found!'}
-            </div> */}
+            </div>
           </div>
         </div>
       )}
