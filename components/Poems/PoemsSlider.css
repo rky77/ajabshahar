@@ -1,12 +1,12 @@
 /* components/Poems/PoemsSlider.css */
 .poems-slider {
-  max-width: 850px;
-  min-height: 850px;
-  margin: 2rem auto;
+  max-width: 750px;
+  min-height: 750px;
+  margin: 30px auto;
   padding: 0 1rem;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
-  border: 40px solid rgba(255, 255, 255, 0.5);
+  border: 34px solid rgba(255, 255, 255, 0.5);
   position: relative;
   display: flex;
   justify-content: center;
@@ -144,6 +144,18 @@
 }
 .language-button {
   margin: 0 0 22px;
+}
+
+@media screen and (max-width: 1580px) {
+  .poem-transliteration {
+    font-size: 24px;
+    max-width: 420px;
+  }
+  .poems-slider {
+    max-width: 700px;
+    min-height: 700px;
+    margin: 20px auto;
+  }
 }
 /* Responsive Design */
 @media (max-width: 768px) {

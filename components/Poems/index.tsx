@@ -23,10 +23,10 @@ export default function Poems() {
       ) : (
         <div>
           {/* Main Content */}
-          <div className="max-w-[1240px] mx-auto px-4 pb-8">
+          <div className="poems-inner-container mx-auto px-4 pb-8">
             {/* Search Header */}
             <div className="text-center poems-about">{POEMS_INTRO}</div>
-            <div className="text-left mb-2">
+            <div className="text-left mb-2 pr-2 pl-2">
               <h1 className="text-2xl md:text-3xl font-light black-custom-color mb-0 mt-0">
                 {totalSongs} songs
               </h1>

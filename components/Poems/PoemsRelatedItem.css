@@ -64,8 +64,6 @@ button.fillter-btn {
 .poems-result-page-heading span {
   color: #6d6e71;
   font-size: 22px;
-  font-family: 'lora-italic';
-  font-style: italic;
   font-weight: 300;
   margin: 0 0 0 0.5rem;
 }
@@ -110,4 +108,26 @@ button.fillter-btn {
 }
 .related-border-top {
   border-top: 1px solid #c6c6c5;
+}
+
+@media screen and (max-width: 1580px) {
+  .poems-heading {
+    font-size: 25px;
+  }
+  .poems-result-page-heading {
+    font-size: 24px;
+  }
+
+  .poems-result-page-heading span {
+    font-size: 20px;
+  }
+  .search-result-text {
+    font-size: 17px;
+  }
+  .see-all-btn {
+    font-size: 18px;
+  }
+  .poems-related-inner-container {
+    max-width: 1000px;
+  }
 }

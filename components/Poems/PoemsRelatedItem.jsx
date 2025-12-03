@@ -1,73 +1,106 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import './PoemsRelatedItem.css';
 
-// Main data array for search results
-const searchData = {
-  query: 'farid',
-  totalResults: 20,
-  filters: ['ALL', 'SONGS', 'POEMS', 'REFLECTIONS', 'OTHER'],
-  activeFilter: 'ALL',
-  results: [
-    {
-      id: 1,
-      type: 'SONGS',
-      title: 'Had Anhad',
-      subtitle: "I Lost My Heart To Nizam's Glance",
-      description:
-        'The story highlights the gulshan-e-na-afreeda (the Uncreated Garden) that Shah Inayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egoic spirit of connection and love.',
-      image: '/TN-About-Basavalingaiah-Hiremath.jpg',
-      category: 'Music',
-    },
-    {
-      id: 2,
-      type: 'POEMS',
-      title: 'Gulshan-e-Armaan',
-      subtitle: 'by KABIR PROJECT',
-      description:
-        'The story highlights the gulshan-e-na-afreeda (the Uncreated Garden) that Shah Inayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egoic spirit of connection and love.',
-      image: '/TN-About-Basavalingaiah-Hiremath.jpg',
-      category: 'Poetry',
-    },
-    {
-      id: 3,
-      type: 'POEMS',
-      title: 'Haman Hai Isha',
-      description:
-        'The story highlights the gulshan-e-na-afreeda (the Uncreated Garden) that Shah Inayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egoic spirit of connection and love.',
-      image: '/TN-About-Basavalingaiah-Hiremath.jpg',
-      category: 'Poetry',
-    },
-    {
-      id: 4,
-      type: 'OTHER',
-      title: 'Mystic Poetry Collection',
-      subtitle: "Farid's Legacy",
-      description:
-        'A collection of mystical poems and reflections from the Sufi tradition, featuring the works of Farid and other spiritual poets.',
-      image: '/TN-About-Basavalingaiah-Hiremath.jpg',
-      category: 'Collection',
-    },
-  ],
-  counts: {
-    ALL: 6,
-    SONGS: 1,
-    POEMS: 3,
-    REFLECTIONS: 0,
-    OTHER: 1,
-  },
-};
-
 export default function PoemsRelatedItem() {
+  // Main data array for search results
+  const searchData = {
+    query: 'farid',
+    totalResults: 20,
+    filters: ['ALL', 'SONGS', 'POEMS', 'REFLECTIONS', 'OTHER'],
+    activeFilter: 'ALL',
+    results: [
+      {
+        id: 1,
+        type: 'SONGS',
+        title: 'Had Anhad',
+        subtitle: "I Lost My Heart To Nizam's Glance",
+        description:
+          'The story highlights the gulshan-e-na-afreeda (the Uncreated Garden) that Shah Inayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egoic spirit of connection and love.',
+        image: '/TN-About-Basavalingaiah-Hiremath.jpg',
+        category: 'Music',
+      },
+      {
+        id: 2,
+        type: 'POEMS',
+        title: 'Gulshan-e-Armaan',
+        subtitle: 'by KABIR PROJECT',
+        description:
+          'The story highlights the gulshan-e-na-afreeda (the Uncreated Garden) that Shah Inayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egoic spirit of connection and love.',
+        image: '/TN-About-Basavalingaiah-Hiremath.jpg',
+        category: 'Poetry',
+      },
+      {
+        id: 3,
+        type: 'POEMS',
+        title: 'Haman Hai Isha',
+        description:
+          'The story highlights the gulshan-e-na-afreeda (the Uncreated Garden) that Shah Inayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egoic spirit of connection and love.',
+        image: '/TN-About-Basavalingaiah-Hiremath.jpg',
+        category: 'Poetry',
+      },
+      {
+        id: 4,
+        type: 'OTHER',
+        title: 'Mystic Poetry Collection',
+        subtitle: "Farid's Legacy",
+        description:
+          'A collection of mystical poems and reflections from the Sufi tradition, featuring the works of Farid and other spiritual poets.',
+        image: '/TN-About-Basavalingaiah-Hiremath.jpg',
+        category: 'Collection',
+      },
+    ],
+    counts: {
+      ALL: 6,
+      SONGS: 1,
+      POEMS: 3,
+      REFLECTIONS: 0,
+      OTHER: 1,
+    },
+  };
+
   const [activeFilter, setActiveFilter] = useState(searchData.activeFilter);
+  const [imageDimensions, setImageDimensions] = useState({
+    width: 280,
+    height: 186,
+  });
 
   // Filter results based on active filter
   const filteredResults =
     activeFilter === 'ALL'
       ? searchData.results
       : searchData.results.filter((item) => item.type === activeFilter);
+
+  useEffect(() => {
+    const updateImageDimensions = () => {
+      if (window.innerWidth < 1580) {
+        // For screens less than 1580px
+        setImageDimensions({
+          width: 220,
+          height: 150,
+        });
+      } else {
+        // For larger screens
+        setImageDimensions({
+          width: 280,
+          height: 186,
+        });
+      }
+    };
+
+    // Initial check
+    updateImageDimensions();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', updateImageDimensions);
+
+    // Cleanup event listener
+    return () => {
+      window.removeEventListener('resize', updateImageDimensions);
+    };
+  }, []);
 
   return (
     <div className="mt-8">
@@ -108,13 +141,13 @@ export default function PoemsRelatedItem() {
               <div className="flex flex-col md:flex-row gap-6">
                 {/* Image */}
                 <div className="flex-shrink-0">
-                  <div className="flex-shrink-0 w-full md:w-72.5 h-32 md:h-40 bg-gray-200 overflow-hidden rounded-md news-banner-shadow">
+                  <div className="flex-shrink-0  bg-gray-200 overflow-hidden rounded-md news-banner-shadow">
                     <Image
                       src={item.image}
                       alt={item.title}
-                      width={280}
-                      height={186}
-                      className="w-full h-full object-cover"
+                      width={imageDimensions.width}
+                      height={imageDimensions.height}
+                      className="object-cover"
                     />
                   </div>
                 </div>
@@ -124,7 +157,7 @@ export default function PoemsRelatedItem() {
                   {/* Title */}
                   <h2 className="poems-result-page-heading mb-2">
                     {item.title}
-                    {item.subtitle && <span className="mb-3 italic">{item.subtitle}</span>}
+                    {item.subtitle && <span className="mb-3">{item.subtitle}</span>}
                   </h2>
 
                   {/* Description */}

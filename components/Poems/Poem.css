@@ -9,18 +9,15 @@
 button.border-0.button-font.cursor-pointer.transition-colors.button-active-text.font-semibold {
   color: #ed1e79;
 }
+
 .poems-about {
   color: #575756;
-  font-family: 'lora-italic';
   background: transparent;
   font-size: 20px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: normal;
+  line-height: 28px;
   max-width: 1055px;
   margin: 0 auto 50px;
 }
-
 span.see-all {
   color: #e31e79;
   font-family: 'Merriweather Sans';
@@ -29,13 +26,15 @@ span.see-all {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.869px;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 .heading-border {
   border-top: 1px solid #b1b1b1;
 }
 
 .black-custom-color {
-  color: #4d4d4d;
+  color: #3c3c3b;
 }
 
 .text-pink {
@@ -56,6 +55,10 @@ button.fillter-btn {
   border-right: 1px solid #fff;
   margin: 0 10px;
 } */
+.poems-inner-container {
+  max-width: 1240px;
+  width: 100%;
+}
 
 .inner-container-poems {
   padding: 100px 0 200px;
@@ -80,4 +83,24 @@ button.fillter-btn {
 }
 .button.fillter-btn:before {
   display: none;
+}
+
+@media screen and (max-width: 1580px) {
+  .poems-about {
+    font-size: 19px;
+    max-width: 1055px;
+  }
+  .black-custom-color {
+    font-size: 25px;
+  }
+  span.see-all {
+    font-size: 18px;
+  }
+  .poems-inner-container {
+    max-width: 1180px;
+    width: 100%;
+  }
+  .poems-related-inner-container .button-font {
+    font-size: 20px;
+  }
 }
