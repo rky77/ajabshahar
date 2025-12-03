@@ -3,8 +3,13 @@ header nav a,
   color: #1a1a1a;
   font-size: 25px;
 }
+header nav a {
+  margin: 0 15px 0;
+}
 .radio-logo img {
-  margin-top: -1rem;
+  margin: -16px 0 0 5px;
+  max-width: 50px;
+  width: 100%;
 }
 .footer-heading-text {
   color: #e31e79;
@@ -13,11 +18,14 @@ header nav a,
   font-weight: 400;
 }
 .header-inner-container {
-  padding: 36px 4% 0 3%;
+  padding: 40px 52px 0;
   box-sizing: border-box;
 }
 .nav-link.active {
   color: #e31e79;
+}
+.logo {
+  margin: 15px 0 0;
 }
 
 @media screen and (max-width: 1480px) {

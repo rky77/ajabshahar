@@ -14,7 +14,7 @@
   padding: 4px 4px 0 4px;
 }
 .border-top-pink {
-  border-top: 1px solid #e31e79;
+  border-top: 1px solid #6d6e71aa;
   padding: 1rem 0 0;
   box-sizing: border-box;
 }
@@ -86,7 +86,7 @@
 }
 .card-text {
   font-size: 17px;
-  line-height: 22px;
+  line-height: 25px;
   color: #6d6e71;
   margin: 15px 0 34px;
 }
@@ -145,7 +145,7 @@
   background-size: 100%;
   max-width: 1420px;
   margin: 0 auto;
-  padding: 0 0 100px 0;
+  padding: 0 0 200px 0;
 }
 
 /* Apply padding only for cards with no video/image */
@@ -186,7 +186,7 @@
     max-width: 1260px;
   }
   .card-heading {
-    font-size: 28px !important;
+    font-size: 25px !important;
   }
   .semi-heading {
     font-size: 22px;

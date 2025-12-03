@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 import { navigationItems } from '@/lib/data';
 import Image from 'next/image';
 import logo from '../public/logo.svg';
-import radio from '../public/radio.svg';
+import radio from '../public/radio-v2.svg';
 import '../styles/Header.css';
 
 interface HeaderProps {
@@ -29,7 +29,7 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
               <Link href="/" className="flex items-center space-x-3">
                 <div className="w-30 flex items-center justify-center relative">
                   <div className="absolute inset-2 flex items-center justify-center">
-                    <Image src={logo} alt="Ajab Shahar" width={150} height={150} />
+                    <Image className="logo" src={logo} alt="Ajab Shahar" width={150} height={150} />
                   </div>
                 </div>
               </Link>
@@ -69,7 +69,7 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
                 <Search className="w-8 h-8" />
               </button>
 
-              <div className="w-auto h-11 radio-logo rounded-full flex items-center justify-center cursor-pointer mr-0">
+              <div className="radio-logo  flex items-center justify-center cursor-pointer mr-0">
                 <Image src={radio} alt="Ajab Shahar Radio" />
               </div>
 

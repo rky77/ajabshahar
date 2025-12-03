@@ -84,7 +84,7 @@ export default function ContentSliderModal({
             </div>
             <button
               onClick={onClose}
-              className="text-pink-600 hover:text-pink-700 mr-1 text-xl font-bold cursor-pointer"
+              className="text-pink-400  mr-1 text-xl font-bold cursor-pointer"
               aria-label="Close"
             >
               ✕

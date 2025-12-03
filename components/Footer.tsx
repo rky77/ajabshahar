@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { footerLinks, contentData } from '@/lib/data';
 import '../styles/Footer.css';
 import Image from 'next/image';
-import footerLogo from '../public/footer-logo.svg';
+import footerLogo from '../public/k_logo.svg';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -19,7 +19,7 @@ export default function Footer() {
 
   return (
     <footer className="text-white footer-bg relative">
-      <div className="pt-26 pb-12 px-4 sm:px-6 lg:px-8">
+      <div className="">
         <div className="footer-content-max-width mx-auto">
           <div className="footer-inner">
             {/* About Section */}
@@ -32,7 +32,7 @@ export default function Footer() {
               <div className="footer-support-seaction">
                 <h3 className="footer-heading-text">Support</h3>
                 <p className="text-gray-footer">
-                  If you have found joy and value here, consider supporting this work.
+                  If you have found joy and value here please consider supporting this work.
                 </p>
               </div>
             </div>
@@ -45,7 +45,7 @@ export default function Footer() {
                 </Link>
               </h3>
               <p className="text-gray-footer mb-4 w-[80%]">
-                Sign up with us to recieve news, inspirations and more...
+                Sign up with us to receive news, inspirations and more...
               </p>
 
               <form onSubmit={handleSubscribe} className="flex footer-form">
@@ -66,14 +66,14 @@ export default function Footer() {
                 </button>
               </form>
 
-              <div className="mt-4">
+              <div className="mt-5">
                 <p className="text-gray-footer text-sm">
                   Write to{' '}
                   <a href="mailto:ajabshahar@gmail.com" className="pink">
                     ajabshahar@gmail.com
                   </a>
                 </p>
-                <p className="text-gray-footer text-sm">
+                <p className="text-gray-footer text-sm mt-1">
                   Find us on{' '}
                   {footerLinks.social.map((link, index) => (
                     <span key={link.name}>
@@ -110,7 +110,7 @@ export default function Footer() {
           {/* Bottom Section */}
           <div className="mt-12 pt-8 footer-border text-center">
             <div className="flex justify-center footer-logo">
-              <Image src={footerLogo} alt="Ajab Shahar" width={130} height={130} />
+              <Image src={footerLogo} alt="Ajab Shahar" width={100} />
             </div>
             <p className="text-gray-footer-400 text-xs footer-text">
               Website Design{' '}
@@ -133,17 +133,6 @@ export default function Footer() {
                   className="no-underline hover:underline hover:text-gray-300 transition-colors"
                 >
                   Kabir Project
-                </a>
-              </span>{' '}
-              at{' '}
-              <span>
-                <a
-                  href="http://shabadhunfoundation.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="no-underline hover:underline hover:text-gray-300 transition-colors"
-                >
-                  Shabad Dhun Foundation
                 </a>
               </span>
             </p>

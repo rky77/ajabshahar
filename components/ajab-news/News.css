@@ -34,7 +34,7 @@
   font-size: 28px;
   font-weight: 400;
   line-height: normal;
-  margin: 0 0 4px 0;
+  margin: 20px 0 4px 0;
 }
 .leading-relaxed {
   color: #6d6e71;
@@ -88,11 +88,17 @@ p {
     width: 100%;
   }
   .border-dotted-seprator {
-    max-width: 1055px;
+    max-width: 880px;
     width: 100%;
   }
   .news-detals-row {
-    max-width: 1055px;
+    max-width: 843px;
+    margin: 0 auto;
+  }
+  .news-thum-text-row {
+    max-width: 843px;
+    width: 100%;
+    margin: 0 auto;
   }
   .news-card-slider-row button svg {
     width: 20px;
@@ -109,6 +115,6 @@ p {
   }
   .news-border,
   .border-dotted-seprator {
-    margin: 20px auto 28px;
+    margin: 20px auto 35px;
   }
 }
