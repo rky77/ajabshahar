@@ -25,12 +25,14 @@
   z-index: 10;
   top: -29px;
 }
-.news-text img {
-  max-width: 150px;
+.news-text {
   position: absolute;
-  left: 35px;
-  z-index: 10;
-  top: 50%;
+  color: #808080;
+  font-size: 32px;
+  font-weight: 400;
+  font-family: 'lora-italic';
+  top: 15px;
+  left: 25px;
 }
 
 .card-text {
@@ -87,4 +89,20 @@
 }
 .news-pop-up-modal .pink {
   font-size: 14px;
+}
+
+.news-pop-up-modal .next-button {
+  right: 7%;
+  top: 26%;
+  background: none;
+}
+.news-pop-up-modal .previous-button {
+  top: 26%;
+  left: 7%;
+  background: none;
+}
+.news-pop-up-modal .pop-up-close {
+  color: #e31e79;
+  font-size: 28px;
+  font-weight: 300;
 }

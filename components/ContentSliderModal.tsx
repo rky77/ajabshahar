@@ -8,7 +8,6 @@ import 'swiper/css/navigation';
 import Image from 'next/image';
 
 import ajabNewsLogo from '../public/ajab-news-fly.png';
-import ajabNewsText from '../public/ajab-news-text.png';
 import PrevIcon from '../public/left-arrow.svg';
 import NextIcon from '../public/right-arrow.svg';
 
@@ -64,7 +63,10 @@ export default function ContentSliderModal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center news-pop-up-modal overflow-y-auto  backdrop-blur">
+    <div
+      className="fixed inset-0 z-50 flex items-start justify-center news-pop-up-modal 
+    overflow-y-auto bg-black/40 backdrop-blur-sm"
+    >
       <div
         className={`relative w-full max-w-[900px] 
       ${isSmall ? 'h-[640px]' : 'h-[830px]'} 
@@ -73,18 +75,16 @@ export default function ContentSliderModal({
     `}
       >
         {/* Scrollable inner content */}
-        <div className="relative flex flex-col items-center justify-start max-w-[620px] w-full bg-transparent rounded-2xl py-4 mx-auto  max-h-[720px]">
+        <div className="relative flex flex-col items-center justify-start max-w-[620px] w-full bg-transparent rounded-2xl  mx-auto  max-h-[720px] pt-1 pr-1 pb-2 pl-1">
           {/* Header */}
           <div className="flex items-center justify-between w-full pt-3 px-2 pb-3 bg-white rounded-t-2xl sticky top-0 z-10">
             <div className="news-logo">
               <Image src={ajabNewsLogo} alt="Ajab News" />
             </div>
-            <div className="news-text">
-              <Image src={ajabNewsText} alt="Ajab News" />
-            </div>
+            <div className="news-text">ajab news</div>
             <button
               onClick={onClose}
-              className="text-pink-400  mr-1 text-xl font-bold cursor-pointer"
+              className="pop-up-close mr-1 text-xl font-bold cursor-pointer"
               aria-label="Close"
             >
               ✕
@@ -97,7 +97,7 @@ export default function ContentSliderModal({
             <button
               ref={prevRef}
               aria-label="Previous"
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full w-10 h-10 flex items-center justify-center cursor-pointer z-20"
+              className="absolute previous-button bg-white/90 hover:bg-white rounded-full w-10 h-10 flex items-center justify-center cursor-pointer z-20"
             >
               <Image src={PrevIcon} alt="Prev" width={16} height={16} />
             </button>
@@ -106,7 +106,7 @@ export default function ContentSliderModal({
             <button
               ref={nextRef}
               aria-label="Next"
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full w-10 h-10 flex items-center justify-center cursor-pointer z-20"
+              className="absolute next-button  bg-white/90 hover:bg-white rounded-full w-10 h-10 flex items-center justify-center cursor-pointer z-20"
             >
               <Image src={NextIcon} alt="Next" width={16} height={16} />
             </button>
