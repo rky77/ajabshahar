@@ -5,19 +5,36 @@ import Link from 'next/link';
 import '../../../styles/CustomStyle.css';
 import './Poem.css';
 
-export default function Poem() {
+export default function Poem({ data }) {
+  if (!data) return null;
+
+
+  console.log('poem  data : ',data);
+  const heading = data.original_title;
+  const metaDescription = data.meta_description;
+  const poets = data.translator  ;
+  const meta_keywords = data.meta_keywords;
+
+console.log('meta description ',metaDescription);
+console.log('meta description ',heading);
+console.log('meta description ',poets);
+
+
+
+
+  
   // Data from the screenshot
-  const poemData = {
-    id: 'amir-khusro-maati-kahe',
-    poets: [
-      {
-        name: 'AMIR KHUSRO',
-      },
-    ],
-    heading: 'The potter tells the earth - Thus and thus I pound you...',
-    metaDescription: `Maati kahe kumhaar se 
-tu kya roondat moye? Ik din aisa aayega, main rondungi toyev The potter tells the earth`,
-  };
+//   const poemData = {
+//     id: 'amir-khusro-maati-kahe',
+//     poets: [
+//       {
+//         name: 'AMIR KHUSRO',
+//       },
+//     ],
+//     heading: 'The potter tells the earth - Thus and thus I pound you...',
+//     metaDescription: `Maati kahe kumhaar se 
+// tu kya roondat moye? Ik din aisa aayega, main rondungi toyev The potter tells the earth`,
+//   };
 
   const hasMedia = false;
 
@@ -30,19 +47,19 @@ tu kya roondat moye? Ik din aisa aayega, main rondungi toyev The potter tells th
             !hasMedia ? 'flex flex-col items-center text-center' : ''
           }`}
         >
-          {/* Poem text */}
+  +       {/* Poem text */}
           <p className="card-text leading-relaxed mb-4 whitespace-pre-line line-clamp-4 overflow-hidden text-ellipsis">
-            {poemData.metaDescription}
+            {metaDescription}
           </p>
           <div className="mb-4 whitespace-pre-line peopm-heading whitespace-pre-line line-clamp-2 overflow-hidden text-ellipsis">
-            {poemData.heading}
+            {meta_keywords}
           </div>
 
           {/* Poet name with border */}
           <div className="mb-2 border-top-pink">
-            {poemData.poets[0]?.name && (
+            {poets && (
               <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3">
-                <span className="lowercase">poet</span> {poemData.poets[0]?.name}
+                <span className="lowercase">poet</span> {poets}
               </p>
             )}
           </div>
@@ -50,7 +67,7 @@ tu kya roondat moye? Ik din aisa aayega, main rondungi toyev The potter tells th
           {/* Explore poem link */}
           <div className="justify-self-stretch justify-end">
             <Link
-              href={`/${poemData.id}/maati-kahe-kumhaar-se`}
+              href={`/${data.id}/maati-kahe-kumhaar-se`}
               className="text-sm font-medium pink hover:text-pink-700 transition-colors z-20 uppercase"
             >
               {`EXPLORE POEM`}

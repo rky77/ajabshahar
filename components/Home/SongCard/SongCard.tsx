@@ -3,34 +3,44 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import '../../../styles/CustomStyle.css';
-import { Song } from './types';
 
 const YOUTUBE_URL = 'https://www.youtube.com/embed';
 
-export default function SongCard(item: Song) {
-  const hasMedia = item.youtubeVideoId || item.thumbnailURL;
+export default function SongCard({
+  id,
+  song_title,
+  singer_name,
+  thumbnail_url,
+  about,
+  youtubeVideoId,
+  song_discription 
+  // if API sends later
+}) {
+  // Check if media exists
+  const hasMedia = youtubeVideoId || thumbnail_url;
 
   return (
-    <div
+    <div id={id}
       className={`bg-white card-rounded-4 shadow-lg hover:shadow-xl transition-shadow duration-300 ${
         !hasMedia ? 'no-media-card' : ''
       }`}
+      style={{ "width": hasMedia ? "400px" : "fit-content", "marginLeft": hasMedia ? "200px" : "auto" }}
     >
-      {/* Media */}
+      {/* Media (Video OR Thumbnail) */}
       {hasMedia && (
         <div className="relative h-50 w-full video-custom-width">
-          {item.youtubeVideoId ? (
+          {youtubeVideoId ? (
             <iframe
-              src={`${YOUTUBE_URL}/${item.youtubeVideoId}`}
-              title={item.metaTitle}
+              src={`${YOUTUBE_URL}/${youtubeVideoId}`}
+              title={song_title}
               className="h-full w-full frame-radius "
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
           ) : (
             <Image
-              src={item.thumbnailURL}
-              alt={item.metaTitle}
+              src={"https://ajabshahar.aaravega.in/" + thumbnail_url}
+              alt={song_title}
               fill
               className="object-cover rounded-t-lg"
             />
@@ -38,48 +48,37 @@ export default function SongCard(item: Song) {
         </div>
       )}
 
-      {/* Card content */}
+      {/* Content */}
       <div
         className={`p-5 card-shape-top pt-1 pb-0 ${
           !hasMedia ? 'flex flex-col items-center text-center' : ''
         }`}
       >
         <div className="mb-2">
+
+          {/* Title */}
           <h3 className="card-heading font-semibold mb-1">
-            {/* {item.metaTitle} */}
-            Main Nijaam Se Naina
+            {song_title}
           </h3>
-          <p className="text-sm lora-italic mb-2 semi-heading">I Lost My Heart To Nizam’s Glance</p>
-          {/* {item.songTitle.englishTranslation && (
-            <p className="text-sm lora-italic mb-2 semi-heading">
-              {item.songTitle.englishTranslation}
-            </p>
-          )} */}
-          {/* {item.poets[0]?.name && ( */}
-          {/* <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3">
-            <span className="lowercase">says</span> {item.poets[0]?.name}
-          </p> */}
-          <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3">
-            <span className="lowercase">sing</span> FARID AYAZ & ABU MOHAMMED
+
+          {/* Singer */}
+          <p className="text-sm lora-italic mb-2 semi-heading">
+            {singer_name}
           </p>
-          <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3">
-            <span className="lowercase">poet</span> AMIR KHUSRO
-          </p>
+
         </div>
 
-        <p className="card-text leading-relaxed mb-4 border-top-pink line-clamp-5 overflow-hidden text-ellipsis">
-          {/* {item.metaDescription} */}
-          The delicacy of locking eyes with the beloved and losing one’s heart to him combines in
-          this song with a delightful disregard for social convention, represented by the gossiping
-          neighbourhood women ...
+        {/* Description (HTML allowed) */}
+        <p className="card-text leading-relaxed mb-4 border-top-pink line-clamp-5 overflow-hidden text-ellipsis"
+          dangerouslySetInnerHTML={{ __html: song_discription }}>
         </p>
 
         <div className={`${!hasMedia ? 'justify-center' : 'justify-end'} flex`}>
           <Link
-            href={`/songs/details/${item.id}`}
+            href={`/songs/details/${id}`}
             className="text-sm font-medium pink hover:text-pink-700 transition-colors z-20 uppercase"
           >
-            {`EXPLORE SONG`}
+            EXPLORE SONG
           </Link>
         </div>
       </div>

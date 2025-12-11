@@ -6,65 +6,68 @@ import '../../../styles/CustomStyle.css';
 
 const YOUTUBE_URL = 'https://www.youtube.com/embed';
 
-export default function Reflection() {
-  // Static data from screenshot
-  const reflectionData = {
-    id: 'had-anhad',
-    metaTitle: 'Shoonya is not nothingness',
-    metaDescription:
-      "Nothing has its own intrinsic character. Everything exists in relation to something else. The name of this realization is 'shoonya'",
-    director: 'says KRISHNA NATH',
-    youtubeVideoId: 'your-video-id',
-    thumbnailURL: '/path-to-thumbnail.jpg',
-  };
+export default function Reflection({ data }) {
+  if (!data) return null;
+
+  const title = data.title;
+  const description = data.meta_description;
+  const personName = data.person_name_english || data.person_name_hindi;
+  const thumbnail = data.thumbnail_url || null;
+  const youtubeVideoId = data.youtube_video_id || null;
 
   return (
     <div className="bg-white card-rounded-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
-      {/* Media - Always shown now */}
+
+      {/* Media */}
       <div className="relative h-50 w-full video-custom-width">
-        {reflectionData.youtubeVideoId ? (
+        {youtubeVideoId ? (
           <iframe
-            src={`${YOUTUBE_URL}/${reflectionData.youtubeVideoId}`}
-            title={reflectionData.metaTitle}
-            className="h-full w-full frame-radius "
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            src={`${YOUTUBE_URL}/${youtubeVideoId}`}
+            title={title}
+            className="h-full w-full frame-radius"
             allowFullScreen
           />
         ) : (
-          <Image
-            src={reflectionData.thumbnailURL}
-            alt={reflectionData.metaTitle}
-            fill
-            className="object-cover rounded-t-lg"
-          />
+          thumbnail && (
+            <Image
+              src={thumbnail}
+              alt={title}
+              fill
+              className="object-cover rounded-t-lg"
+            />
+          )
         )}
       </div>
 
-      {/* Card content */}
+      {/* Content */}
       <div className="p-5 card-shape-top pt-1 pb-0">
+        
         <div className="mb-2">
-          <h3 className="card-heading font-semibold mb-1 line-clamp-2 overflow-hidden text-ellipsis">
-            {reflectionData.metaTitle}
+          <h3 className="card-heading font-semibold mb-1 line-clamp-2">
+            {title}
           </h3>
-          {reflectionData.director && (
-            <p className="text-xs semi-heading-2 font-medium text-gray-500  tracking-wide mb-3 line-clamp-1 overflow-hidden text-ellipsis">
-              {reflectionData.director}
+
+          {personName && (
+            <p className="text-xs semi-heading-2 font-medium text-gray-500 mb-3 line-clamp-1">
+              says {personName}
             </p>
           )}
         </div>
 
-        <p className="card-text leading-relaxed mb-4 border-top-pink line-clamp-5 overflow-hidden text-ellipsis">
-          {reflectionData.metaDescription}
+        <p className="card-text leading-relaxed mb-4 border-top-pink line-clamp-5">
+          {description}
         </p>
 
+        {/* Explore Link */}
         <div className="justify-end flex">
           <Link
-            href={`/films/${reflectionData.id}`}
-            className="text-sm font-medium pink hover:text-pink-700 transition-colors z-20 uppercase"
+            href={`/reflection/${data.id}`}
+            className="text-sm font-medium pink hover:text-pink-700 transition-colors uppercase"
           >
-            {`EXPLORE REFLECTION`}
+            EXPLORE REFLECTION
           </Link>
         </div>
+
       </div>
     </div>
   );

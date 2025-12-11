@@ -6,55 +6,56 @@ import '../../../styles/CustomStyle.css';
 
 const YOUTUBE_URL = 'https://www.youtube.com/embed';
 
-export default function People() {
-  // Static data from screenshot
+export default function People({ data }) {
+  if (!data) return null; // Prevent crash
+
   const filmData = {
-    id: 'had-anhad',
-    metaTitle: 'Maukhik Parampara',
+    id: data.id,
+    metaTitle: data.person_name_english || data.person_name_hindi || "Unknown Person",
     metaDescription:
-      'While there are many kinds of oral traditions – those which transmit mythology, sacred texts and folklore – our focus here are the oral traditions of Kabir or other mystic poets – the Bhaktas, Sufis and Bauls. While there are many kinds of oral traditions.',
-    subtitle: 'Oral Traditions',
-    director: 'Intro byVIPUL RIKHI',
-    youtubeVideoId: 'your-video-id', // Add your video ID
-    thumbnailURL: '/path-to-thumbnail.jpg', // Add your thumbnail path
+      data.category_name ||
+      "This person is part of the Ajab Shahar oral and cultural traditions.",
+    subtitle: data.category_type || "Oral Tradition",
+    director: "", // People के लिए director नहीं होता
+    youtubeVideoId: null, // People में वीडियो नहीं होता
+    thumbnailURL: data.thumbnail_url, // Image from API
   };
 
   return (
     <div className="bg-white card-rounded-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
-      {/* Media - Always shown now */}
+      
+      {/* Media (UI SAME) */}
       <div className="relative h-50 w-full video-custom-width">
         {filmData.youtubeVideoId ? (
           <iframe
             src={`${YOUTUBE_URL}/${filmData.youtubeVideoId}`}
             title={filmData.metaTitle}
             className="h-full w-full frame-radius"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
         ) : (
-          <Image
-            src={filmData.thumbnailURL}
-            alt={filmData.metaTitle}
-            fill
-            className="object-cover rounded-t-lg"
-          />
+          filmData.thumbnailURL && (
+            <Image
+              src={filmData.thumbnailURL}
+              alt={filmData.metaTitle}
+              fill
+              className="object-cover rounded-t-lg"
+            />
+          )
         )}
       </div>
 
-      {/* Card content */}
+      {/* Content (UI SAME) */}
       <div className="p-5 card-shape-top pt-1 pb-0">
+        
         <div className="mb-2">
           <h3 className="card-heading font-semibold mb-1 line-clamp-1 overflow-hidden text-ellipsis">
             {filmData.metaTitle}
           </h3>
+
           {filmData.subtitle && (
             <p className="text-sm lora-italic mb-2 semi-heading line-clamp-1 overflow-hidden text-ellipsis">
               {filmData.subtitle}
-            </p>
-          )}
-          {filmData.director && (
-            <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3 line-clamp-1 overflow-hidden text-ellipsis">
-              {filmData.director}
             </p>
           )}
         </div>
@@ -65,13 +66,15 @@ export default function People() {
 
         <div className="justify-end flex">
           <Link
-            href={`/films/${filmData.id}`}
+            href={`/people/${filmData.id}`}
             className="text-sm font-medium pink hover:text-pink-700 transition-colors z-20 uppercase"
           >
-            {`EXPLORE PEOPLE`}
+            EXPLORE PEOPLE
           </Link>
         </div>
+
       </div>
+
     </div>
   );
 }

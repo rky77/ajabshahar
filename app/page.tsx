@@ -6,6 +6,7 @@ import Hero from '@/components/Hero';
 import Loader from '@/components/Loader';
 import { useEffect, useState } from 'react';
 
+
 export default function HomePage() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -32,6 +33,7 @@ export default function HomePage() {
       <Header onSearchToggle={handleSearchToggle} isSearchOpen={isSearchOpen} />
       <Hero isSearchOpen={isSearchOpen} />
       <Footer />
+      
     </main>
   );
 }

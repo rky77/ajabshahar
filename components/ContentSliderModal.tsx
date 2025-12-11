@@ -140,6 +140,7 @@ export default function ContentSliderModal({
               {items.map((item) => (
                 <SwiperSlide key={item.id} className="flex justify-center">
                   <div className="max-w-[430px] w-full mx-auto modal-container pt-0">
+                    heello
                     <ContentCard item={item} className="rounded-none shadow-none" />
                   </div>
                 </SwiperSlide>

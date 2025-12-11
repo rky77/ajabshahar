@@ -21,6 +21,7 @@ export default function ContentCard({ item }: ContentCardProps) {
       {/* Media */}
       {hasMedia && (
         <div className="relative h-60 w-full vide-custom-width">
+          
           {item.video ? (
             item.video.includes('youtube.com') ? (
               <iframe
