@@ -3,41 +3,40 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const YOUTUBE_URL = 'https://www.youtube.com/embed';
-
 export default function FilmCard({ data }) {
-
-  console.log("FilmCard data: jj", data);
   if (!data) return null;
 
-  const thumbnail = data.thumbnail_url;
-  const title = data.english_translation;
-  const director = data.director_name_english;
-  const description = data.about_text;
-  const youtubeVideoId = data.youtube_video_id || null;
+  // ✔ Thumbnail full URL
+  const thumbnail = data.thumbnail_url
+    ? "https://ajabshahar.aaravega.in/" + data.thumbnail_url
+    : null;
+
+  const title = data.original_title;
+  const director = data.meta_keywords;
+  const meta_description = data.meta_description;
+  const description = data.description;
+
+  console.log("FilmCard data:", data);
 
   return (
-    <div className="bg-white card-rounded-4 shadow-lg hover:shadow-xl transition-shadow duration-300"  id={data.id}>
+    <div
+      className="bg-white card-rounded-4 shadow-lg hover:shadow-xl transition-shadow duration-300"
+      id={data.id}
+    >
 
-      {/* Media */}
+      {/* Thumbnail ONLY */}
       <div className="relative h-50 w-full video-custom-width">
-        {youtubeVideoId ? (
-          <iframe
-            src={`${YOUTUBE_URL}/${youtubeVideoId}`}
-            title={title}
-            className="h-full w-full frame-radius"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
+        {thumbnail ? (
+          <Image
+            src={thumbnail}
+            alt={title}
+            fill
+            className="object-cover rounded-t-lg"
           />
         ) : (
-          thumbnail && (
-            <Image
-              src={thumbnail}
-              alt={title}
-              fill
-              className="object-cover rounded-t-lg"
-            />
-          )
+          <div className="h-full w-full bg-gray-200 flex items-center justify-center rounded-t-lg">
+            <span>No Thumbnail</span>
+          </div>
         )}
       </div>
 
@@ -48,6 +47,10 @@ export default function FilmCard({ data }) {
             {title}
           </h3>
 
+          <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3 line-clamp-1">
+            {description}
+          </p>
+
           {director && (
             <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3 line-clamp-1">
               Director: {director}
@@ -56,7 +59,7 @@ export default function FilmCard({ data }) {
         </div>
 
         <p className="card-text leading-relaxed mb-4 border-top-pink line-clamp-4">
-          <span dangerouslySetInnerHTML={{ __html: description }} />
+          <span dangerouslySetInnerHTML={{ __html: meta_description }} />
         </p>
 
         <div className="justify-end flex">

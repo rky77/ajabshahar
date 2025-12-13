@@ -8,16 +8,19 @@ const YOUTUBE_URL = 'https://www.youtube.com/embed';
 
 export default function SongCard({
   id,
-  song_title,
-  singer_name,
-  thumbnail_url,
-  about,
+  umbrellaTitle,
+  songTitle,
+  singer,
+  poet,
+  thumbnailUrl,
+  metaDescription,
   youtubeVideoId,
-  song_discription 
+  
   // if API sends later
 }) {
   // Check if media exists
-  const hasMedia = youtubeVideoId || thumbnail_url;
+  const hasMedia = youtubeVideoId || thumbnailUrl;
+  console.log("Thumbnail URL:", "https://ajabshahar.aaravega.in/" + thumbnailUrl);
 
   return (
     <div id={id}
@@ -28,25 +31,16 @@ export default function SongCard({
     >
       {/* Media (Video OR Thumbnail) */}
       {hasMedia && (
-        <div className="relative h-50 w-full video-custom-width">
-          {youtubeVideoId ? (
-            <iframe
-              src={`${YOUTUBE_URL}/${youtubeVideoId}`}
-              title={song_title}
-              className="h-full w-full frame-radius "
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          ) : (
-            <Image
-              src={"https://ajabshahar.aaravega.in/" + thumbnail_url}
-              alt={song_title}
-              fill
-              className="object-cover rounded-t-lg"
-            />
-          )}
-        </div>
+       <div className="relative h-52 w-full video-custom-width">
+        <Image
+          src={"https://ajabshahar.aaravega.in/" + thumbnailUrl}
+          alt={umbrellaTitle}
+          fill
+          className="object-cover rounded-t-lg"
+        />
+      </div>
       )}
+       
 
       {/* Content */}
       <div
@@ -58,19 +52,26 @@ export default function SongCard({
 
           {/* Title */}
           <h3 className="card-heading font-semibold mb-1">
-            {song_title}
+            {umbrellaTitle}
           </h3>
-
+            
           {/* Singer */}
           <p className="text-sm lora-italic mb-2 semi-heading">
-            {singer_name}
+            {songTitle}
           </p>
-
+          {singer && (
+            <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3">
+              <span className="lowercase">sing</span> {singer}
+            </p>
+          )}
         </div>
-
+            {/* {poet} */}
+            <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3">
+              <span className="lowercase">poet</span> {poet}
+            </p>
         {/* Description (HTML allowed) */}
         <p className="card-text leading-relaxed mb-4 border-top-pink line-clamp-5 overflow-hidden text-ellipsis"
-          dangerouslySetInnerHTML={{ __html: song_discription }}>
+          dangerouslySetInnerHTML={{ __html: metaDescription }}>
         </p>
 
         <div className={`${!hasMedia ? 'justify-center' : 'justify-end'} flex`}>

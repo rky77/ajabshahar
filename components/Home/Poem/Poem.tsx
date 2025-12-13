@@ -11,7 +11,9 @@ export default function Poem({ data }) {
 
   console.log('poem  data : ',data);
   const heading = data.original_title;
-  const metaDescription = data.meta_description;
+
+  const metaDescription = data.couplet_translation;
+
   const poets = data.translator  ;
   const meta_keywords = data.meta_keywords;
 
@@ -47,12 +49,12 @@ console.log('meta description ',poets);
             !hasMedia ? 'flex flex-col items-center text-center' : ''
           }`}
         >
-  +       {/* Poem text */}
+        {/* Poem text */}
           <p className="card-text leading-relaxed mb-4 whitespace-pre-line line-clamp-4 overflow-hidden text-ellipsis">
-            {metaDescription}
+            {heading}
           </p>
           <div className="mb-4 whitespace-pre-line peopm-heading whitespace-pre-line line-clamp-2 overflow-hidden text-ellipsis">
-            {meta_keywords}
+            {metaDescription}
           </div>
 
           {/* Poet name with border */}
