@@ -33,7 +33,7 @@ const newsData = [
       },
       {
         type: 'paragraph',
-        text: 'The story highlights the gulshan-e-na-a-freeda (the Uncreated Garden) that Shah hayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egote spirit of connection and love. The story highlights the gulshan-e-na-a-freeda (the UnCreated Garden) that Shah hayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egote spirit...more.',
+        text: 'The story highlights the gulshan-e-na-a-freeda (the UnCreated Garden) that Shah hayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egote spirit of connection and love.',
       },
     ],
     images: ['news-banner.webp'],
@@ -141,7 +141,7 @@ function ImageSlider({ images }: { images: string[] }) {
           <>
             <button
               onClick={prevImage}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full transition-colors cursor-pointer"
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full transition-colors cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +158,7 @@ function ImageSlider({ images }: { images: string[] }) {
             </button>
             <button
               onClick={nextImage}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full transition-colors cursor-pointer"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full transition-colors cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +196,7 @@ export default function Ajabnews() {
                 {section.type === 'heading' ? (
                   <h2 className="mb-4 custom-heading-font">{section.text}</h2>
                 ) : (
-                  <ToggleText text={section.text} maxChars={400} />
+                  <ToggleText text={section.text} maxChars={200} />
                 )}
               </div>
             ))}
